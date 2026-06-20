@@ -1,0 +1,843 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flutter Development with Gen Al Integration &mdash; 4 MONTHS &mdash; SMEC Technologies</title>
+  <meta name="description" content="The AI Integrated Flutter Development Course at SMEC Technologies is an industry-oriented training program designed to help learners build high-performance.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --smec-blue: #2f5fd3;
+      --smec-teal: #0aa99a;
+      --ink: #111827;
+      --muted: #667085;
+      --line: #e5e7eb;
+      --soft: #f6f8fb;
+    }
+
+    body {
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+      background: #fff;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .top-strip {
+      background: #747b84;
+      color: #fff;
+      font-size: .875rem;
+    }
+
+    .navbar {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand-logo {
+      width: 155px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .nav-link {
+      color: #1f2937;
+      font-weight: 600;
+      font-size: .92rem;
+    }
+
+    .btn-dark {
+      background: #111827;
+      border-color: #111827;
+    }
+
+    .btn-outline-dark {
+      border-color: #111827;
+      color: #111827;
+    }
+
+    .btn,
+    .nav-link,
+    .social-link,
+    .detail-tab,
+    .course-card {
+      transition: transform .22s ease, box-shadow .22s ease, color .22s ease, background-color .22s ease, border-color .22s ease;
+    }
+
+    .btn:hover,
+    .course-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, .12);
+    }
+
+    .course-hero {
+      padding: clamp(2.75rem, 6vw, 5rem) 0;
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 8% 10%, rgba(47, 95, 211, .13), transparent 27rem),
+        radial-gradient(circle at 100% 86%, rgba(10, 169, 154, .13), transparent 25rem),
+        linear-gradient(rgba(47, 95, 211, .045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47, 95, 211, .045) 1px, transparent 1px),
+        linear-gradient(180deg, #f7f9ff 0%, #fff 84%);
+      background-size: auto, auto, 48px 48px, 48px 48px, auto;
+    }
+
+    .eyebrow {
+      color: #111827;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-size: clamp(2.35rem, 5vw, 4.15rem);
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .text-blue {
+      color: var(--smec-blue);
+    }
+
+    .lead-copy {
+      color: #344054;
+      max-width: 760px;
+      font-size: clamp(1rem, 1.4vw, 1.18rem);
+      line-height: 1.55;
+    }
+
+    .badge-soft {
+      background: rgba(47, 95, 211, .1);
+      color: var(--smec-blue);
+      border: 1px solid rgba(47, 95, 211, .18);
+    }
+
+    .detail-card,
+    .feature-card,
+    .learn-card,
+    .course-card,
+    .cta-band,
+    .enroll-panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 380px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(47, 95, 211, .08), rgba(10, 169, 154, .08)),
+        #f8fafc;
+      overflow: hidden;
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      width: 150px;
+      height: 150px;
+      background-image: radial-gradient(#cbd5e1 1.4px, transparent 1.4px);
+      background-size: 14px 14px;
+      opacity: .8;
+    }
+
+    .media-img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .hero-visual .media-img {
+      position: relative;
+      z-index: 1;
+      object-fit: contain;
+      padding: 24px;
+    }
+
+    .metric {
+      min-height: 96px;
+    }
+
+    .metric i,
+    .icon-box {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      color: var(--smec-blue);
+      background: rgba(47, 95, 211, .09);
+    }
+
+    .section-band {
+      padding: clamp(2.75rem, 6vw, 5rem) 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-band.soft {
+      background: var(--soft);
+    }
+
+    .detail-tabs {
+      top: 75px;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(12px);
+    }
+
+    .detail-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: 1rem .25rem;
+      color: #475467;
+      font-weight: 700;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+    }
+
+    .detail-tab:hover,
+    .detail-tab.active {
+      color: var(--smec-blue);
+      border-color: var(--smec-blue);
+    }
+
+    .content-section + .content-section {
+      margin-top: 3rem;
+    }
+
+    .content-section h2 {
+      color: #0b2b5c;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .content-section p {
+      color: #475467;
+      line-height: 1.75;
+    }
+
+    .check-list {
+      display: grid;
+      gap: .9rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      display: flex;
+      gap: .75rem;
+      color: #475467;
+      line-height: 1.55;
+    }
+
+    .check-list i {
+      color: var(--smec-teal);
+      flex: 0 0 auto;
+      margin-top: .15rem;
+    }
+
+    .curriculum-step {
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    .curriculum-step::before {
+      content: attr(data-step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2rem;
+      height: 2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--smec-blue);
+      font-size: .8rem;
+      font-weight: 800;
+    }
+
+    .curriculum-step + .curriculum-step {
+      margin-top: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .enroll-panel {
+      position: sticky;
+      top: 106px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, .08);
+    }
+
+    .price-current {
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .price-old {
+      color: #98a2b3;
+      text-decoration: line-through;
+      font-weight: 700;
+    }
+
+    .mini-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: .85rem 0;
+      border-bottom: 1px solid var(--line);
+      color: #475467;
+    }
+
+    .mini-row strong {
+      color: var(--ink);
+    }
+
+    .course-card {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .course-media {
+      height: 155px;
+      background: linear-gradient(135deg, rgba(47, 95, 211, .08), rgba(10, 169, 154, .08));
+    }
+
+    .course-media .media-img {
+      object-fit: contain;
+      padding: 16px;
+    }
+
+    .footer {
+      background: #0b1220;
+      color: #cbd5e1;
+    }
+
+    .footer h6 {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .footer a {
+      color: #cbd5e1;
+    }
+
+    .social-link {
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: .4rem;
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 8px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .7s ease, transform .7s ease;
+      transition-delay: var(--reveal-delay, 0ms);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .course-hero .breadcrumb,
+    .hero-title,
+    .lead-copy,
+    .course-hero .btn,
+    .hero-visual,
+    .metric {
+      animation: page-rise .7s ease both;
+    }
+
+    .hero-title {
+      animation-delay: .08s;
+    }
+
+    .lead-copy {
+      animation-delay: .16s;
+    }
+
+    .course-hero .btn {
+      animation-delay: .24s;
+    }
+
+    .hero-visual,
+    .metric {
+      animation-delay: .32s;
+    }
+
+    @keyframes page-rise {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .detail-tabs {
+        top: 67px;
+      }
+
+      .enroll-panel {
+        position: static;
+      }
+
+      .hero-visual {
+        min-height: 300px;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .brand-logo {
+        width: 132px;
+      }
+
+      .hero-title {
+        font-size: 2.35rem;
+      }
+
+      .detail-tabs {
+        overflow-x: auto;
+      }
+
+      .hero-visual {
+        min-height: 260px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-strip py-2">
+    <div class="container d-flex justify-content-center align-items-center gap-2 text-center">
+      <i class="bi bi-sparkles"></i>
+      <span>2026 Batches &mdash; Admissions Open</span>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container py-2">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+        <img class="brand-logo" src="../Logo-Website-Header.webp" alt="SMEC Technologies">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-3">
+          <li class="nav-item"><a class="nav-link active" href="../courses.html" aria-current="page">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="../placements.html">Placements</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Resources</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../index.html#blog">Featured Blogs</a></li>
+              <li><a class="dropdown-item" href="../index.html#news">Latest News</a></li>
+              <li><a class="dropdown-item" href="../contact.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="../about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+        </ul>
+        <form class="d-flex align-items-center gap-2" role="search">
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+            <input class="form-control border-start-0" type="search" placeholder="Search courses..." aria-label="Search">
+          </div>
+          <a class="btn btn-dark text-nowrap" href="https://wa.me/917356398777?text=Hello%20SMEC%20Technologies%2C%20I%20would%20like%20to%20book%20a%20free%20demo%20class.%20Please%20share%20the%20details." target="_blank" rel="noopener">Book a Free Demo</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="course-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="mb-4">
+          <ol class="breadcrumb small mb-0">
+            <li class="breadcrumb-item"><a class="text-secondary" href="../index.html">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-secondary" href="../courses.html">Courses</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Flutter Development</li>
+          </ol>
+        </nav>
+
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <span class="badge badge-soft rounded-pill mb-3 px-3 py-2">App Development</span>
+            <h1 class="hero-title mb-4">Flutter Development with <span class="text-blue">Gen Al Integration</span> &mdash; 4 MONTHS</h1>
+            <p class="lead-copy mb-4">The AI Integrated Flutter Development Course at SMEC Technologies is an industry-oriented training program designed to help learners build high-performance, cross-platform mobile applications using Flutter and modern AI-powered development workflows.</p>
+            <div class="d-flex flex-wrap gap-3 mb-4">
+              <a class="btn btn-dark px-5 py-3" href="#contact">Enroll Now</a>
+            </div>
+            <div class="row g-3">
+              <div class="col-6 col-md-3">
+                <div class="detail-card metric p-3">
+                  <i class="bi bi-star-fill mb-2"></i>
+                  <h4 class="fw-bold mb-1">4.7</h4>
+                  <small class="text-secondary">rating</small>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="detail-card metric p-3">
+                  <i class="bi bi-people mb-2"></i>
+                  <h4 class="fw-bold mb-1">650+</h4>
+                  <small class="text-secondary">learners</small>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="detail-card metric p-3">
+                  <i class="bi bi-calendar3 mb-2"></i>
+                  <h4 class="fw-bold mb-1">4 months</h4>
+                  <small class="text-secondary">duration</small>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="detail-card metric p-3">
+                  <i class="bi bi-graph-up-arrow mb-2"></i>
+                  <h4 class="fw-bold mb-1">Beginner</h4>
+                  <small class="text-secondary">level</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="hero-visual">
+              <img class="media-img" src="../assets/course-flutter.svg" alt="Flutter development with Gen AI training at SMEC Technologies">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="detail-tabs sticky-top">
+      <div class="container">
+        <div class="d-flex gap-4">
+          <a class="detail-tab active" href="#description"><i class="bi bi-file-text"></i>Description</a>
+          <a class="detail-tab" href="#careers"><i class="bi bi-briefcase"></i>Careers</a>
+          <a class="detail-tab" href="#contact"><i class="bi bi-chat-dots"></i>Apply</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="section-band">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-8">
+            <section class="content-section reveal" id="description">
+              <h2>What you'll learn</h2>
+              <div class="row g-3 mt-3">
+                <div class="col-md-6">
+                  <ul class="check-list">
+                    <li><i class="bi bi-check-circle-fill"></i><span>Dart Basics</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i><span>Kotlin Essentials</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i><span>Introduction to Flutter</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i><span>Building Flutter Apps</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i><span>Advanced Flutter Topics</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i><span>Flutter State Management</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i><span>Interview preparation (mock &amp; technical test)</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i><span>Resume preparetion (ATS friendly, LinkedIn profile creation)</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i><span>Flutter Plugins and Packages</span></li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="check-list">
+                    <li><i class="bi bi-check-circle-fill"></i><span>Flutter and Backend Integration</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i><span>Al Code Generation Tool</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i><span>Version Control System</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i><span>Testing and Debugging in Flutter</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i><span>Publishing and Deployment</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i><span>Best Practices and Tips</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i><span>Softskill training(communication)</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i><span>Capstone Project</span></li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section class="content-section reveal">
+              <h2>Course Overview</h2>
+              <p>The AI Integrated Flutter Development Course at SMEC Technologies is an industry-oriented training program designed to help learners build high-performance, cross-platform mobile applications using Flutter and modern AI-powered development workflows. This 3-month intensive course focuses on real-world app development, clean architecture, API integration, and intelligent app features, preparing students for today&rsquo;s competitive mobile development roles.</p>
+              <p>With the growing demand for faster development and smarter applications, Flutter has become one of the most preferred frameworks for building Android, iOS, and web apps from a single codebase. This course equips learners with both core Flutter expertise and AI-driven development skills required by modern tech companies.</p>
+              <p>The program starts with a strong foundation in Dart programming, Flutter framework fundamentals, widget architecture, UI design principles, and responsive layouts. Learners gradually progress into building complete mobile applications with navigation, state management, and backend integration.</p>
+              <p>To align with current industry trends, the course introduces AI-integrated app development concepts, including smart UI generation, AI-assisted coding, intelligent search, chat integrations, recommendation features, and automation tools that enhance development speed and app intelligence.</p>
+            </section>
+
+            <section class="content-section reveal">
+              <h2>Practical &amp; Industry-Focused Training</h2>
+              <p>This course emphasizes hands-on learning through real-time projects. Students work on live Flutter applications such as business apps, service platforms, and data-driven mobile solutions. Training includes API integration, Firebase services, database connectivity, authentication systems, and app deployment practices.</p>
+              <p>Learners also gain exposure to industry-standard development workflows, version control, debugging techniques, performance optimization, and collaboration practices followed by professional development teams.</p>
+            </section>
+
+
+
+            <section class="content-section reveal">
+              <h2>Who Should Enroll?</h2>
+              <p>This course is ideal for:</p>
+              <ul class="check-list mb-3">
+                <li><i class="bi bi-check-circle-fill"></i><span>Fresh graduates looking to start a career in mobile app development</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span>Developers aiming to upgrade skills to Flutter and cross-platform development</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span>Non-IT professionals transitioning into mobile development</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span>Entrepreneurs and startups planning to build scalable mobile applications</span></li>
+              </ul>
+              <p>Basic programming knowledge is helpful but not mandatory, as the course progresses from fundamentals to advanced concepts in a structured manner.</p>
+            </section>
+
+            <section class="content-section reveal" id="careers">
+              <h2>Career Opportunities After the Course</h2>
+              <p>After completing the AI Integrated Flutter Development course, learners can pursue roles such as:</p>
+              <div class="row g-3 mt-2">
+                <div class="col-md-6"><div class="feature-card p-4 h-100"><strong>Flutter Developer</strong></div></div>
+                <div class="col-md-6"><div class="feature-card p-4 h-100"><strong>Mobile App Developer</strong></div></div>
+                <div class="col-md-6"><div class="feature-card p-4 h-100"><strong>Cross-Platform Application Developer</strong></div></div>
+                <div class="col-md-6"><div class="feature-card p-4 h-100"><strong>Junior Software Engineer</strong></div></div>
+                <div class="col-md-6"><div class="feature-card p-4 h-100"><strong>App Development Trainee</strong></div></div>
+              </div>
+              <p class="mt-3">With SMEC Technologies&rsquo; placement support, students receive assistance in resume building, project portfolio preparation, mock interviews, and job placement guidance.</p>
+            </section>
+
+            <section class="content-section reveal">
+              <h2>Why Choose SMEC Technologies?</h2>
+              <p>With 25+ years of industry excellence, SMEC Technologies is a trusted name in professional IT training. Our courses are designed to meet real industry needs, combining practical exposure, modern tools, and AI-enabled workflows.</p>
+              <p>This Flutter Development program empowers learners to build production-ready mobile applications, integrate intelligent features, and confidently step into the mobile development industry.</p>
+            </section>
+          </div>
+
+          <aside class="col-lg-4">
+            <div class="enroll-panel p-4">
+              <span class="badge badge-soft rounded-pill mb-3 px-3 py-2">Job Placement Support</span>
+              <div class="d-flex align-items-end gap-3 mb-3">
+                <div class="price-current">&#8377; 25,000</div>
+                <div class="price-old mb-2">&#8377; 35,000</div>
+              </div>
+              <a class="btn btn-dark w-100 py-3 mb-3" href="#contact">Enroll Now</a>
+              <a class="btn btn-outline-dark w-100 py-3 mb-4" href="tel:+917356398777">Call Us</a>
+
+              <div class="mini-row"><span>Duration</span><strong>4 months</strong></div>
+              <div class="mini-row"><span>Level</span><strong>Beginner</strong></div>
+              <div class="mini-row"><span>Category</span><strong>App Development</strong></div>
+              <div class="mini-row"><span>Mode</span><strong>Offline + Online</strong></div>
+              <div class="mini-row"><span>Language</span><strong>English + Malayalam</strong></div>
+              <div class="mini-row"><span>Certificate</span><strong>Yes</strong></div>
+              <div class="mini-row border-bottom-0"><span>Placement</span><strong>Assistance</strong></div>
+
+              <div class="detail-card p-3 mt-4">
+                <h3 class="h6 fw-bold mb-3">Special Training</h3>
+                <ul class="check-list small">
+                  <li><i class="bi bi-check-circle-fill"></i><span>Aptitude</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i><span>Group Discussion</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i><span>HR Round &amp; Resume Preparation</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i><span>Mock Interviews</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i><span>Communication Classes</span></li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band soft">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between gap-3 mb-4 reveal">
+          <div>
+            <p class="eyebrow mb-2">Keep Exploring</p>
+            <h2 class="fw-bold mb-0">Courses You Might Be Interested In</h2>
+          </div>
+          <a class="fw-bold text-dark align-self-md-end" href="../courses.html">See all <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4 reveal">
+          <div class="col">
+            <article class="course-card">
+              <div class="course-media"><img class="media-img" src="../assets/course-mern.svg" alt="MERN Stack with Gen AI Integration"></div>
+              <div class="p-4">
+                <span class="badge badge-soft rounded-pill mb-3">Full Stack Development</span>
+                <h3 class="h5 fw-bold">MERN Stack with Gen AI Integration - 6 Months</h3>
+                <p class="text-secondary">Build modern web applications with MongoDB, Express, React, Node.js and AI tooling.</p>
+                <a class="btn btn-outline-dark w-100" href="../courses.html#mern-stack-ai">Explore Course</a>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="course-card">
+              <div class="course-media"><img class="media-img" src="../assets/course-data-science.svg" alt="Professional Certificate in Data Analytics with AI"></div>
+              <div class="p-4">
+                <span class="badge badge-soft rounded-pill mb-3">Data Science &amp; Analytics</span>
+                <h3 class="h5 fw-bold">Professional Certificate in Data Analytics with AI</h3>
+                <p class="text-secondary">Turn raw data into decisions with Python, SQL, Power BI and AI-assisted analysis.</p>
+                <a class="btn btn-outline-dark w-100" href="../courses.html#data-analytics-ai">Explore Course</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band" id="contact">
+      <div class="container">
+        <div class="cta-band p-4 p-lg-5 reveal">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <p class="eyebrow mb-2">Proven Training. Real Placements.</p>
+              <h2 class="fw-bold">Talk to our career advisor</h2>
+              <p class="text-secondary mb-0">Join a learning ecosystem trusted by students and industry professionals. We focus on practical skills, expert mentoring, and real career outcomes.</p>
+            </div>
+            <div class="col-lg-5">
+              <div class="d-grid gap-3">
+                <a class="btn btn-dark px-4 py-3" href="tel:+917356398777"><i class="bi bi-telephone me-2"></i>Call +91 73563 98777</a>
+                <a class="btn btn-outline-dark px-4 py-3" href="https://wa.me/917356398777"><i class="bi bi-whatsapp me-2"></i>WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer pt-5">
+    <div class="container">
+      <div class="row g-4 pb-4">
+        <div class="col-lg-3">
+          <img class="brand-logo mb-3" src="../Logo-Website-Header.webp" alt="SMEC Technologies">
+          <p>Kerala's leading software training institute with industry-focused courses, real-world projects, and placement assistance.</p>
+          <div>
+            <a class="social-link" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a class="social-link" href="https://www.instagram.com/smec_technologies_calicut?igsh=MXJtdXRrdWp2cWJvZw==" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+            <a class="social-link" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a class="social-link" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a class="text-secondary" href="../index.html#courses">Courses</a></li>
+            <li><a class="text-secondary" href="../placements.html">Placements</a></li>
+            <li><a class="text-secondary" href="../index.html#blog">Blog</a></li>
+            <li><a class="text-secondary" href="../index.html#news">News</a></li>
+            <li><a class="text-secondary" href="../contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Popular Courses</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a class="text-secondary" href="../courses/data-science-advanced-ai-and-ml.html">Data Science</a></li>
+            <li><a class="text-secondary" href="../courses/python-fullstack.html">Python Full Stack</a></li>
+            <li><a class="text-secondary" href="../courses/mearn-stack.html">MERN Stack</a></li>
+            <li><a class="text-secondary" href="../courses/flutter-development.html">Flutter Development</a></li>
+            <li><a class="text-secondary" href="../courses/software-testing.html">Software Testing</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Company</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a class="text-secondary" href="../about.html">About Us</a></li>
+            <li><a class="text-secondary" href="#">Our Trainers</a></li>
+            <li><a class="text-secondary" href="#">Careers</a></li>
+            <li><a class="text-secondary" href="../termsofservices.html">Terms of Service</a></li>
+            <li><a class="text-secondary" href="../disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6>Locations</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><i class="bi bi-geo-alt me-2"></i><strong>Calicut</strong><br><span class="text-secondary ms-4">3rd Floor, Noor Complex,<br>Arayidathupaalam,<br>Calicut<br>+91 7356398777</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top py-3 d-flex flex-column flex-md-row justify-content-between gap-2">
+        <small>&copy; 2026 SMEC Technologies. All rights reserved.</small>
+        <small>Designed with care in India</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const animatedItems = document.querySelectorAll(".reveal");
+
+      animatedItems.forEach(function (item, index) {
+        item.style.setProperty("--reveal-delay", `${Math.min(index * 55, 220)}ms`);
+      });
+
+      if (!("IntersectionObserver" in window)) {
+        animatedItems.forEach(function (item) {
+          item.classList.add("is-visible");
+        });
+        return;
+      }
+
+      const revealObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      }, {
+        threshold: 0.16
+      });
+
+      animatedItems.forEach(function (item) {
+        revealObserver.observe(item);
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,686 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Service – SMEC Technologies</title>
+  <meta name="description" content="Read the Terms of Service for SMEC Technologies. Understand the rules governing website use, course enrollment, fees, refunds, placement assistance, and more.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --smec-blue: #2f5fd3;
+      --smec-teal: #0aa99a;
+      --ink: #111827;
+      --muted: #667085;
+      --line: #e5e7eb;
+      --soft: #f6f8fb;
+    }
+
+    body {
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+      background: #fff;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .top-strip {
+      background: #747b84;
+      color: #fff;
+      font-size: .875rem;
+    }
+
+    .navbar {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand-logo {
+      width: 155px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .nav-link {
+      color: #1f2937;
+      font-weight: 600;
+      font-size: .92rem;
+    }
+
+    .btn-dark {
+      background: #111827;
+      border-color: #111827;
+    }
+
+    .btn-outline-dark {
+      border-color: #111827;
+      color: #111827;
+    }
+
+    .btn,
+    .nav-link,
+    .social-link {
+      transition: transform .22s ease, box-shadow .22s ease, color .22s ease, background-color .22s ease, border-color .22s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, .12);
+    }
+
+    /* Page Hero Banner */
+    .page-hero {
+      background: linear-gradient(135deg, #f6f8fb 0%, #edf2f7 100%);
+      border-bottom: 1px solid var(--line);
+      padding: 3.5rem 0 2.5rem;
+    }
+
+    .page-hero .eyebrow {
+      color: var(--smec-blue);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.15;
+    }
+
+    .text-blue {
+      color: var(--smec-blue);
+    }
+
+    /* Content layout */
+    .legal-wrap {
+      padding: clamp(2.5rem, 5vw, 4rem) 0;
+    }
+
+    /* Table of Contents sidebar */
+    .toc-card {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+      padding: 1.5rem;
+      position: sticky;
+      top: 80px;
+    }
+
+    .toc-card h6 {
+      font-weight: 800;
+      font-size: .78rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .toc-list li + li {
+      border-top: 1px solid var(--line);
+    }
+
+    .toc-list li a {
+      display: block;
+      padding: .55rem 0;
+      font-size: .875rem;
+      color: #344054;
+      font-weight: 500;
+      transition: color .2s ease, padding-left .2s ease;
+    }
+
+    .toc-list li a:hover {
+      color: var(--smec-blue);
+      padding-left: .4rem;
+    }
+
+    /* Policy section */
+    .policy-section {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--line);
+      animation: page-rise .6s ease both;
+    }
+
+    .policy-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .policy-section .section-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      background: linear-gradient(135deg, var(--smec-blue), var(--smec-teal));
+      color: #fff;
+      font-size: .78rem;
+      font-weight: 800;
+      border-radius: 8px;
+      flex-shrink: 0;
+      margin-right: .75rem;
+    }
+
+    .policy-section h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+    }
+
+    .policy-section p,
+    .policy-section li {
+      color: #344054;
+      line-height: 1.75;
+      font-size: .95rem;
+    }
+
+    .policy-section ul,
+    .policy-section ol {
+      padding-left: 1.25rem;
+    }
+
+    .policy-section ul li,
+    .policy-section ol li {
+      margin-bottom: .35rem;
+    }
+
+    /* Last updated badge */
+    .last-updated-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      background: #f0f4ff;
+      border: 1px solid #d0dbff;
+      border-radius: 20px;
+      padding: .35rem .9rem;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--smec-blue);
+      margin-bottom: 2rem;
+    }
+
+    /* Footer */
+    .footer {
+      background: #fff;
+      color: #344054;
+      font-size: .94rem;
+    }
+
+    .footer h6 {
+      color: #111827;
+      font-weight: 800;
+    }
+
+    .footer .list-unstyled li {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      white-space: normal;
+    }
+
+    .footer .list-unstyled li span {
+      display: inline-block;
+      max-width: 100%;
+      white-space: normal;
+    }
+
+    .social-link {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #eef2f7;
+      color: #111827;
+      display: inline-grid;
+      place-items: center;
+      margin-right: .4rem;
+    }
+
+    .social-link:hover {
+      background: var(--smec-blue);
+      color: #fff;
+    }
+
+    @keyframes page-rise {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .toc-card {
+        position: static;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .brand-logo {
+        width: 132px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-strip py-2">
+    <div class="container d-flex justify-content-center align-items-center gap-2 text-center">
+      <i class="bi bi-rocket-takeoff"></i>
+      <span>Upgrade Your Career with Industry-Focused IT Training at SMEC Technologies.</span>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container py-2">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img class="brand-logo" src="Logo-Website-Header.webp" alt="SMEC Technologies">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="placements.html">Placements</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Resources</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html#blog">Featured Blogs</a></li>
+              <li><a class="dropdown-item" href="index.html#news">Latest News</a></li>
+              <li><a class="dropdown-item" href="contact.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <form class="d-flex align-items-center gap-2" role="search">
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+            <input class="form-control border-start-0" type="search" placeholder="Search for courses..." aria-label="Search">
+          </div>
+          <a class="btn btn-dark text-nowrap" href="https://wa.me/917356398777?text=Hello%20SMEC%20Technologies%2C%20I%20would%20like%20to%20book%20a%20free%20demo%20class.%20Please%20share%20the%20details." target="_blank" rel="noopener">Book a Free Demo</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb mb-0" style="font-size:.85rem;">
+            <li class="breadcrumb-item"><a href="index.html" class="text-secondary">Home</a></li>
+            <li class="breadcrumb-item active text-dark fw-semibold">Terms of Service</li>
+          </ol>
+        </nav>
+        <p class="eyebrow mb-2">Legal Information</p>
+        <h1>Terms of <span class="text-blue">Service</span></h1>
+        <p class="text-secondary mt-2 mb-0" style="max-width:620px;">By accessing our website or enrolling in our courses, you agree to comply with and be bound by the following Terms of Service.</p>
+      </div>
+    </section>
+
+    <!-- Legal Content -->
+    <section class="legal-wrap">
+      <div class="container">
+        <div class="row g-5">
+
+          <!-- Table of Contents (Sidebar) -->
+          <div class="col-lg-3">
+            <div class="toc-card">
+              <h6>Table of Contents</h6>
+              <ul class="toc-list">
+                <li><a href="#section-intro">Introduction</a></li>
+                <li><a href="#section-1">1. Company Information</a></li>
+                <li><a href="#section-2">2. Use of Website</a></li>
+                <li><a href="#section-3">3. Lead Collection &amp; Consent</a></li>
+                <li><a href="#section-4">4. Marketing Communication</a></li>
+                <li><a href="#section-5">5. Course Enrollment &amp; Eligibility</a></li>
+                <li><a href="#section-6">6. Fees, Payments &amp; Installments</a></li>
+                <li><a href="#section-7">7. Refund &amp; Cancellation Policy</a></li>
+                <li><a href="#section-8">8. Placement Assistance Disclaimer</a></li>
+                <li><a href="#section-9">9. Advertisement &amp; Results</a></li>
+                <li><a href="#section-10">10. Intellectual Property Rights</a></li>
+                <li><a href="#section-11">11. Code of Conduct</a></li>
+                <li><a href="#section-12">12. Limitation of Liability</a></li>
+                <li><a href="#section-13">13. Third-Party Tools &amp; Links</a></li>
+                <li><a href="#section-14">14. Privacy Policy</a></li>
+                <li><a href="#section-15">15. Termination of Access</a></li>
+                <li><a href="#section-16">16. Force Majeure</a></li>
+                <li><a href="#section-17">17. Governing Law &amp; Jurisdiction</a></li>
+                <li><a href="#section-18">18. Grievance Redressal</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-9">
+            <div class="last-updated-badge">
+              <i class="bi bi-calendar3"></i>
+              Effective Date: December 17, 2025
+            </div>
+
+            <!-- Introduction -->
+            <div class="policy-section" id="section-intro">
+              <h2><span class="section-number"><i class="bi bi-file-text"></i></span>Welcome to SMEC Technologies</h2>
+              <p>Welcome to SMEC Technologies. By accessing our website <a href="https://smectechnologies.co.in/" class="text-dark fw-semibold">https://smectechnologies.co.in/</a>, submitting your information, enrolling in our courses, or using any of our services, you agree to comply with and be bound by the following Terms of Service.</p>
+              <p>If you do not agree with these terms, please discontinue use of our website and services.</p>
+            </div>
+
+            <!-- Section 1 -->
+            <div class="policy-section" id="section-1">
+              <h2><span class="section-number">1</span>Company Information</h2>
+              <ul class="list-unstyled">
+                <li class="mb-1"><strong>SMEC Technologies</strong></li>
+                <li class="mb-1"><i class="bi bi-geo-alt me-2 text-secondary"></i>3rd Floor, Noor Complex, Arayidathupaalam, Calicut</li>
+                <li class="mb-1"><i class="bi bi-telephone me-2 text-secondary"></i>+91 7356398777</li>
+                <li><i class="bi bi-envelope me-2 text-secondary"></i><a href="mailto:mahima.smeclabs@gmail.com" class="text-dark">mahima.smeclabs@gmail.com</a></li>
+              </ul>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="policy-section" id="section-2">
+              <h2><span class="section-number">2</span>Use of Website</h2>
+              <ul>
+                <li>The website content is provided for informational and educational purposes only.</li>
+                <li>We reserve the right to modify content, courses, pricing, or policies at any time without prior notice.</li>
+                <li>Unauthorized use of this website may result in legal action.</li>
+                <li>Users must not attempt to gain unauthorized access to systems or misuse the website in any way.</li>
+              </ul>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="policy-section" id="section-3">
+              <h2><span class="section-number">3</span>Lead Collection, Data Usage &amp; Consent</h2>
+              <p>By submitting your details through our website, Meta advertisements, landing pages, or any online/offline form, you expressly consent to:</p>
+              <ul>
+                <li>Collection of personal information including name, phone number, email address, qualification details, and related data.</li>
+                <li>Being contacted via phone call, WhatsApp, SMS, email, or other communication channels for course information, counseling, promotional updates, and placement-related communication.</li>
+                <li>Storage and processing of your information for academic, administrative, marketing, and support purposes.</li>
+              </ul>
+              <p>We do not sell personal data to third parties. However, data may be shared with authorized staff, training partners, certification bodies, or placement partners strictly for service-related purposes.</p>
+              <p>You may opt out of promotional communication by contacting us at <a href="mailto:mahima.smeclabs@gmail.com" class="text-dark fw-semibold">mahima.smeclabs@gmail.com</a>.</p>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="policy-section" id="section-4">
+              <h2><span class="section-number">4</span>Marketing Communication Authorization</h2>
+              <p>By providing your contact details, you authorize SMEC Technologies to communicate with you regarding:</p>
+              <ul>
+                <li>Course details</li>
+                <li>Offers and promotions</li>
+                <li>Workshops and events</li>
+                <li>Certification updates</li>
+                <li>Placement assistance opportunities</li>
+              </ul>
+              <p>This authorization remains valid unless you withdraw consent in writing.</p>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="policy-section" id="section-5">
+              <h2><span class="section-number">5</span>Course Enrollment &amp; Eligibility</h2>
+              <ul>
+                <li>Admission is subject to eligibility criteria defined by SMEC Technologies.</li>
+                <li>Accurate personal and academic information must be provided at registration.</li>
+                <li>We reserve the right to accept or reject applications without obligation to disclose reasons.</li>
+                <li>Course structure, syllabus, tools, duration, and faculty allocation may be updated based on industry requirements.</li>
+              </ul>
+            </div>
+
+            <!-- Section 6 -->
+            <div class="policy-section" id="section-6">
+              <h2><span class="section-number">6</span>Fees, Payments &amp; Installments</h2>
+              <ul>
+                <li>Course fees must be paid as per the agreed payment schedule.</li>
+                <li>Admission is confirmed only after receipt of payment.</li>
+                <li>Fees once paid are non-transferable.</li>
+                <li>Delay or failure in installment payments may result in suspension of access to training, materials, certifications, or placement support.</li>
+                <li>SMEC Technologies reserves the right to revise fees at its discretion.</li>
+              </ul>
+              <p>Regular attendance, assignments, and project completion are mandatory to receive course completion certificates.</p>
+            </div>
+
+            <!-- Section 7 -->
+            <div class="policy-section" id="section-7">
+              <h2><span class="section-number">7</span>Refund &amp; Cancellation Policy</h2>
+              <ul>
+                <li>Registration fees (if applicable) are non-refundable.</li>
+                <li>No refund shall be provided after course commencement unless approved under exceptional circumstances.</li>
+                <li>Refund requests (if any) will be reviewed on a case-by-case basis.</li>
+                <li>Course cancellations initiated by SMEC Technologies may result in rescheduling or partial/full refund at management discretion.</li>
+              </ul>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="policy-section" id="section-8">
+              <h2><span class="section-number">8</span>Placement Assistance Disclaimer</h2>
+              <p>SMEC Technologies provides placement assistance support to eligible candidates. However:</p>
+              <ul>
+                <li>We do not guarantee employment.</li>
+                <li>Salary packages depend on individual performance, skills, experience, and market demand.</li>
+                <li>Final hiring decisions are made solely by recruiting companies.</li>
+                <li>Placement support may be withdrawn in cases of misconduct, poor attendance, or non-compliance with academic requirements.</li>
+              </ul>
+            </div>
+
+            <!-- Section 9 -->
+            <div class="policy-section" id="section-9">
+              <h2><span class="section-number">9</span>Advertisement &amp; Results Disclaimer</h2>
+              <p>Any testimonials, salary figures, placement success stories, or promotional claims shared on our website or advertisements represent individual outcomes.</p>
+              <p>Results may vary from candidate to candidate and are not guaranteed.</p>
+            </div>
+
+            <!-- Section 10 -->
+            <div class="policy-section" id="section-10">
+              <h2><span class="section-number">10</span>Intellectual Property Rights</h2>
+              <p>All website content, training materials, branding, logos, videos, and course resources are the intellectual property of SMEC Technologies.</p>
+              <ul>
+                <li>Unauthorized reproduction, distribution, or commercial use is strictly prohibited.</li>
+                <li>Students may use materials strictly for personal educational purposes.</li>
+                <li>Recording or redistribution of classes without written consent is prohibited.</li>
+              </ul>
+            </div>
+
+            <!-- Section 11 -->
+            <div class="policy-section" id="section-11">
+              <h2><span class="section-number">11</span>Code of Conduct</h2>
+              <p>Students and users must:</p>
+              <ul>
+                <li>Maintain professional behavior.</li>
+                <li>Avoid plagiarism and academic misconduct.</li>
+                <li>Refrain from disruptive or defamatory behavior.</li>
+                <li>Not misuse institutional resources.</li>
+              </ul>
+              <p>Violation may result in suspension or termination without refund.</p>
+            </div>
+
+            <!-- Section 12 -->
+            <div class="policy-section" id="section-12">
+              <h2><span class="section-number">12</span>Limitation of Liability</h2>
+              <p>SMEC Technologies shall not be liable for:</p>
+              <ul>
+                <li>Indirect or consequential losses.</li>
+                <li>Career outcomes beyond training scope.</li>
+                <li>Technical disruptions beyond reasonable control.</li>
+                <li>Third-party actions including recruiters or certification bodies.</li>
+              </ul>
+            </div>
+
+            <!-- Section 13 -->
+            <div class="policy-section" id="section-13">
+              <h2><span class="section-number">13</span>Third-Party Tools &amp; Links</h2>
+              <p>Our website may use third-party services such as analytics tools, advertising platforms (including Meta Pixel), and external certification bodies.</p>
+              <p>We are not responsible for third-party privacy practices or content.</p>
+            </div>
+
+            <!-- Section 14 -->
+            <div class="policy-section" id="section-14">
+              <h2><span class="section-number">14</span>Privacy Policy</h2>
+              <p>Our detailed Privacy Policy governs the collection, storage, and processing of personal information. Users are encouraged to review it separately.</p>
+            </div>
+
+            <!-- Section 15 -->
+            <div class="policy-section" id="section-15">
+              <h2><span class="section-number">15</span>Termination of Access</h2>
+              <p>We reserve the right to suspend or terminate access to services without prior notice in case of:</p>
+              <ul>
+                <li>Breach of Terms of Service</li>
+                <li>Non-payment of fees</li>
+                <li>Misconduct or misuse of institutional resources</li>
+              </ul>
+            </div>
+
+            <!-- Section 16 -->
+            <div class="policy-section" id="section-16">
+              <h2><span class="section-number">16</span>Force Majeure</h2>
+              <p>SMEC Technologies shall not be held liable for delays or failure in performance due to circumstances beyond reasonable control, including natural disasters, government actions, technical failures, or public emergencies.</p>
+            </div>
+
+            <!-- Section 17 -->
+            <div class="policy-section" id="section-17">
+              <h2><span class="section-number">17</span>Governing Law &amp; Jurisdiction</h2>
+              <p>These Terms of Service shall be governed by the laws of India.</p>
+              <p>Any disputes shall be subject to the exclusive jurisdiction of courts located in Ernakulam, Kerala.</p>
+            </div>
+
+            <!-- Section 18 -->
+            <div class="policy-section" id="section-18">
+              <h2><span class="section-number">18</span>Grievance Redressal</h2>
+              <p>For complaints, concerns, or clarifications:</p>
+              <ul class="list-unstyled">
+                <li class="mb-1"><strong>SMEC Technologies</strong></li>
+                <li class="mb-1"><i class="bi bi-geo-alt me-2 text-secondary"></i>3rd Floor, Noor Complex, Arayidathupaalam, Calicut</li>
+                <li class="mb-1"><i class="bi bi-telephone me-2 text-secondary"></i>+91 7356398777</li>
+                <li><i class="bi bi-envelope me-2 text-secondary"></i><a href="mailto:mahima.smeclabs@gmail.com" class="text-dark">mahima.smeclabs@gmail.com</a></li>
+              </ul>
+              <p class="mt-3">All grievances will be reviewed and responded to within a reasonable timeframe.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer pt-5">
+    <div class="container">
+      <div class="row g-4 pb-4">
+        <div class="col-lg-3">
+          <img class="brand-logo mb-3" src="Logo-Website-Header.webp" alt="SMEC Technologies">
+          <p>Kerala's leading software training institute with industry-focused courses, real-world projects, and placement assistance.</p>
+          <div>
+            <a class="social-link" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a class="social-link" href="https://www.instagram.com/smec_technologies_calicut?igsh=MXJtdXRrdWp2cWJvZw==" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+            <a class="social-link" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a class="social-link" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a class="text-secondary" href="index.html#courses">Courses</a></li>
+            <li><a class="text-secondary" href="placements.html">Placements</a></li>
+            <li><a class="text-secondary" href="index.html#blog">Blog</a></li>
+            <li><a class="text-secondary" href="index.html#news">News</a></li>
+            <li><a class="text-secondary" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Popular Courses</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a class="text-secondary" href="index.html#courses">Data Science</a></li>
+            <li><a class="text-secondary" href="index.html#courses">Python Full Stack</a></li>
+            <li><a class="text-secondary" href="index.html#courses">MERN Stack</a></li>
+            <li><a class="text-secondary" href="index.html#courses">Flutter Development</a></li>
+            <li><a class="text-secondary" href="index.html#courses">Software Testing</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Company</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a class="text-secondary" href="about.html">About Us</a></li>
+            <li><a class="text-secondary" href="#">Our Trainers</a></li>
+            <li><a class="text-secondary" href="#">Careers</a></li>
+            <li><a class="text-secondary" href="termsofservices.html">Terms of Service</a></li>
+            <li><a class="text-secondary" href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6>Locations</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><i class="bi bi-geo-alt me-2"></i><strong>Calicut</strong><br><span class="text-secondary ms-4">3rd Floor, Noor Complex,<br>Arayidathupaalam,<br>Calicut<br>+91 7356398777</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top py-3 d-flex flex-column flex-md-row justify-content-between gap-2">
+        <small>&copy; 2026 SMEC Technologies. All rights reserved.</small>
+        <small>Designed with care in India</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Smooth scroll for TOC links
+    document.querySelectorAll('.toc-list a[href^="#"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          var offset = 100;
+          var top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Highlight active TOC item on scroll
+    var sections = document.querySelectorAll('.policy-section[id]');
+    var tocLinks = document.querySelectorAll('.toc-list a');
+    window.addEventListener('scroll', function() {
+      var scrollY = window.scrollY + 120;
+      sections.forEach(function(section) {
+        var sectionTop = section.offsetTop;
+        var sectionH = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionH) {
+          tocLinks.forEach(function(a) { a.style.color = ''; a.style.fontWeight = ''; });
+          var active = document.querySelector('.toc-list a[href="#' + section.id + '"]');
+          if (active) { active.style.color = '#2f5fd3'; active.style.fontWeight = '700'; }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+

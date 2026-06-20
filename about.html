@@ -1,0 +1,904 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | SMEC Technologies</title>
+  <meta name="description" content="Learn about SMEC Technologies, a software training institute focused on practical IT training, expert mentorship, and career-ready learning.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --smec-blue: #2f5fd3;
+      --smec-teal: #0aa99a;
+      --ink: #111827;
+      --muted: #667085;
+      --line: #e5e7eb;
+      --soft: #f6f8fb;
+    }
+
+    body {
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+      background: #fff;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .top-strip {
+      background: #747b84;
+      color: #fff;
+      font-size: .875rem;
+    }
+
+    .navbar {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand-logo {
+      width: 155px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .nav-link {
+      color: #1f2937;
+      font-weight: 600;
+      font-size: .92rem;
+    }
+
+    .nav-link.active,
+    .text-blue {
+      color: var(--smec-blue);
+    }
+
+    .btn-dark {
+      background: #111827;
+      border-color: #111827;
+    }
+
+    .btn-outline-dark {
+      border-color: #111827;
+      color: #111827;
+    }
+
+    .btn,
+    .nav-link,
+    .social-link {
+      transition: transform .22s ease, box-shadow .22s ease, color .22s ease, background-color .22s ease, border-color .22s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, .12);
+    }
+
+    .eyebrow {
+      color: #111827;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .page-hero {
+      padding: clamp(3rem, 7vw, 6.5rem) 0 clamp(2.5rem, 5vw, 4.5rem);
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 5vw, 4.35rem);
+      line-height: 1.04;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .lead-copy {
+      color: #344054;
+      max-width: 680px;
+    }
+
+    .breadcrumb-band {
+      background: #eef3ff;
+      border-bottom: 1px solid var(--line);
+      font-size: .92rem;
+    }
+
+    .breadcrumb-band a {
+      color: #111827;
+      font-weight: 700;
+    }
+
+    .section-band {
+      padding: clamp(2.75rem, 6vw, 5rem) 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-band.soft {
+      background: var(--soft);
+    }
+
+    .about-visual,
+    .stat-card,
+    .feature-card,
+    .story-card,
+    .director-panel,
+    .cta-band {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .about-visual {
+      position: relative;
+      min-height: 440px;
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(47, 95, 211, .08), rgba(10, 169, 154, .06)),
+        #f8fafc;
+      overflow: hidden;
+    }
+
+    .media-img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .about-visual .media-img {
+      position: relative;
+      z-index: 1;
+      object-fit: contain;
+      padding: 18px;
+    }
+
+    .dot-grid {
+      position: absolute;
+      top: 24px;
+      left: -84px;
+      width: 165px;
+      height: 165px;
+      background-image: radial-gradient(#cbd5e1 1.4px, transparent 1.4px);
+      background-size: 14px 14px;
+    }
+
+    .floating-card {
+      position: absolute;
+      right: -20px;
+      bottom: 42px;
+      max-width: 275px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, .92);
+      box-shadow: 0 18px 60px rgba(15, 23, 42, .12);
+      backdrop-filter: blur(12px);
+      z-index: 2;
+      animation: subtle-float 5.5s ease-in-out infinite;
+    }
+
+    .stat-card,
+    .feature-card,
+    .story-card,
+    .director-panel,
+    .cta-band {
+      transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+    }
+
+    .feature-card:hover,
+    .story-card:hover {
+      transform: translateY(-4px);
+      border-color: #d0d5dd;
+      box-shadow: 0 18px 42px rgba(15, 23, 42, .08);
+    }
+
+    .stat-card {
+      min-height: 108px;
+    }
+
+    .growth-panel {
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(47, 95, 211, .06), rgba(10, 169, 154, .05)),
+        #fff;
+      overflow: hidden;
+    }
+
+    .growth-panel::after {
+      content: "";
+      position: absolute;
+      right: -82px;
+      bottom: -82px;
+      width: 180px;
+      height: 180px;
+      border: 1px solid rgba(47, 95, 211, .16);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .growth-copy {
+      position: relative;
+      z-index: 1;
+      max-width: 520px;
+    }
+
+    .growth-stat {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      min-height: 142px;
+      gap: 1rem;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .growth-stat:hover {
+      transform: translateY(-4px);
+      border-color: #d0d5dd;
+      box-shadow: 0 18px 42px rgba(15, 23, 42, .08);
+    }
+
+    .stat-icon {
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #f8fafc;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      color: #111827;
+      font-size: 1.2rem;
+    }
+
+    .feature-icon,
+    .event-icon {
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #f8fafc;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+    }
+
+    .feature-icon i,
+    .event-icon i {
+      color: #111827;
+      font-size: 1.35rem;
+    }
+
+    .story-media {
+      height: 210px;
+      border-radius: 8px 8px 0 0;
+      overflow: hidden;
+      background: linear-gradient(135deg, #f8fafc, #edf2f7);
+    }
+
+    .story-card {
+      overflow: hidden;
+    }
+
+    .mission-card {
+      min-height: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .director-panel {
+      overflow: hidden;
+    }
+
+    .director-media {
+      min-height: 430px;
+      background: linear-gradient(135deg, #f8fafc, #edf2f7);
+    }
+
+    .director-media .media-img {
+      object-fit: contain;
+      object-position: center bottom;
+      padding: 12px;
+    }
+
+    .badge-soft {
+      background: #eef2f7;
+      color: #344054;
+      border: 1px solid #e4e7ec;
+    }
+
+    .cta-band {
+      overflow: hidden;
+    }
+
+    .cta-band.enhanced {
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(47, 95, 211, .08), rgba(10, 169, 154, .06)),
+        #fff;
+      color: var(--ink);
+    }
+
+    .cta-band.enhanced::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+      background-size: 18px 18px;
+      opacity: .22;
+      pointer-events: none;
+    }
+
+    .cta-band.enhanced > .row {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-proof {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .86);
+      box-shadow: 0 14px 34px rgba(15, 23, 42, .06);
+      backdrop-filter: blur(8px);
+    }
+
+    .footer {
+      background: #fff;
+      color: #344054;
+      font-size: .94rem;
+    }
+
+    .footer h6 {
+      color: #111827;
+      font-weight: 800;
+    }
+
+    .footer .list-unstyled li {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      white-space: normal;
+    }
+
+    .footer .list-unstyled li span {
+      display: inline-block;
+      max-width: 100%;
+      white-space: normal;
+    }
+
+    .social-link {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #eef2f7;
+      color: #111827;
+      display: inline-grid;
+      place-items: center;
+      margin-right: .4rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .7s ease, transform .7s ease;
+      transition-delay: var(--reveal-delay, 0ms);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .page-hero .eyebrow,
+    .hero-title,
+    .lead-copy,
+    .page-hero .btn,
+    .about-visual {
+      animation: page-rise .7s ease both;
+    }
+
+    .hero-title {
+      animation-delay: .08s;
+    }
+
+    .lead-copy {
+      animation-delay: .16s;
+    }
+
+    .page-hero .btn {
+      animation-delay: .24s;
+    }
+
+    .about-visual {
+      animation-delay: .32s;
+    }
+
+    @keyframes page-rise {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes subtle-float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .about-visual {
+        min-height: 340px;
+      }
+
+      .floating-card {
+        right: 18px;
+        bottom: 20px;
+      }
+
+      .director-media {
+        min-height: 320px;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .brand-logo {
+        width: 132px;
+      }
+
+      .hero-title {
+        font-size: 2.45rem;
+      }
+
+      .about-visual {
+        min-height: 280px;
+        border-radius: 18px;
+      }
+
+      .floating-card {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin: -42px 16px 0;
+      }
+
+      .story-media {
+        height: 180px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-strip py-2">
+    <div class="container d-flex justify-content-center align-items-center gap-2 text-center">
+      <i class="bi bi-rocket-takeoff"></i>
+      <span>Upgrade Your Career with Industry-Focused IT Training at SMEC Technologies.</span>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container py-2">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img class="brand-logo" src="Logo-Website-Header.webp" alt="SMEC Technologies">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="placements.html">Placements</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html#blog" role="button" data-bs-toggle="dropdown">Resources</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html#blog">Featured Blogs</a></li>
+              <li><a class="dropdown-item" href="index.html#news">Latest News</a></li>
+              <li><a class="dropdown-item" href="index.html#contact">FAQ</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <form class="d-flex align-items-center gap-2" role="search">
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+            <input class="form-control border-start-0" type="search" placeholder="Search for courses..." aria-label="Search">
+          </div>
+          <a class="btn btn-dark text-nowrap" href="https://wa.me/917356398777?text=Hello%20SMEC%20Technologies%2C%20I%20would%20like%20to%20book%20a%20free%20demo%20class.%20Please%20share%20the%20details." target="_blank" rel="noopener">Book a Free Demo</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="breadcrumb-band py-3">
+      <div class="container">
+        <a href="index.html">Home</a>
+        <i class="bi bi-chevron-right mx-2 text-secondary"></i>
+        <span class="text-secondary">About Us</span>
+      </div>
+    </div>
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <p class="eyebrow mb-3">Software Training With Purpose</p>
+            <h1 class="hero-title mb-4">Learn with passion to live with <span class="text-blue">purpose</span></h1>
+            <p class="lead-copy mb-4">SMEC Technologies is a software training institute focused on continuous learning, innovation, and real-world skill development. From day one, we help learners become confident, industry-ready professionals for today's fast-changing technology landscape.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="btn btn-dark px-5 py-3" href="index.html#courses">Explore Courses</a>
+              <a class="btn btn-outline-dark px-5 py-3" href="contact.html">Talk to Us</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-visual">
+              <div class="dot-grid"></div>
+              <img class="media-img" src="assets/about-learners.png" alt="SMEC Technologies practical learning environment">
+              <div class="floating-card p-4">
+                <div class="d-flex gap-3 align-items-center">
+                  <div class="event-icon"><i class="bi bi-mortarboard"></i></div>
+                  <div>
+                    <strong>Future-ready training</strong>
+                    <p class="small text-secondary mb-0">Practical skills, live projects, expert guidance, and placement support.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band soft">
+      <div class="container">
+        <div class="growth-panel p-4 p-lg-5 reveal">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5">
+              <div class="growth-copy">
+                <p class="eyebrow mb-2">We just keep growing</p>
+                <h2 class="fw-bold mb-3">A learning community shaped by real career outcomes.</h2>
+                <p class="text-secondary mb-0">Our growth comes from students who learn by doing: practical classes, mentor-led projects, regular evaluations, and steady placement guidance.</p>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="row row-cols-1 row-cols-sm-2 g-3">
+                <div class="col">
+                  <div class="stat-card growth-stat p-4">
+                    <div class="stat-icon"><i class="bi bi-people"></i></div>
+                    <div>
+                      <h3 class="fw-bold mb-1 count-number" data-count="35899">0</h3>
+                      <strong>Online Followers</strong>
+                      <p class="small text-secondary mb-0">A growing learner community following our tech updates and career guidance.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="stat-card growth-stat p-4">
+                    <div class="stat-icon"><i class="bi bi-mortarboard"></i></div>
+                    <div>
+                      <h3 class="fw-bold mb-1 count-number" data-count="25678">0</h3>
+                      <strong>Students Trained</strong>
+                      <p class="small text-secondary mb-0">Learners trained through practical, industry-focused software programs.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="stat-card growth-stat p-4">
+                    <div class="stat-icon"><i class="bi bi-check2-circle"></i></div>
+                    <div>
+                      <h3 class="fw-bold mb-1 count-number" data-count="11223">0</h3>
+                      <strong>Completed Classes</strong>
+                      <p class="small text-secondary mb-0">Hands-on sessions covering real tools, assignments, and project workflows.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="stat-card growth-stat p-4">
+                    <div class="stat-icon"><i class="bi bi-person-workspace"></i></div>
+                    <div>
+                      <h3 class="fw-bold mb-1 count-number" data-count="2678">0</h3>
+                      <strong>Trainers & Experts</strong>
+                      <p class="small text-secondary mb-0">Mentor support from professionals with practical industry experience.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band">
+      <div class="container">
+        <div class="text-center mb-4 reveal">
+          <h2 class="fw-bold">What Makes Us <span class="text-blue">Special?</span></h2>
+          <p class="text-secondary mb-0">Expert mentors, hands-on projects, and updated industry-focused training help every student gain practical experience and confidence.</p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4 reveal">
+          <div class="col">
+            <article class="story-card h-100">
+              <div class="story-media"><img class="media-img" src="assets/about-learners.png" alt="SMEC team and students"></div>
+              <div class="p-4">
+                <span class="badge badge-soft rounded-pill mb-3">Who we are</span>
+                <h3 class="h5 fw-bold">A team of IT experts and mentors</h3>
+                <p class="text-secondary mb-0">A passionate team of trainers and mentors dedicated to shaping future tech talent with real industry knowledge in every class.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="story-card h-100">
+              <div class="story-media"><img class="media-img" src="assets/about-bootcamp.png" alt="Full stack web development bootcamp"></div>
+              <div class="p-4">
+                <span class="badge badge-soft rounded-pill mb-3">What we do</span>
+                <h3 class="h5 fw-bold">Structured, job-focused IT training</h3>
+                <p class="text-secondary mb-0">We design practical programs that help learners master in-demand skills, stay updated with technology, and build strong career foundations.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="story-card h-100">
+              <div class="story-media"><img class="media-img" src="assets/about-training.jpg" alt="Students attending practical software training"></div>
+              <div class="p-4">
+                <span class="badge badge-soft rounded-pill mb-3">How it works</span>
+                <h3 class="h5 fw-bold">Learn by doing, every day</h3>
+                <p class="text-secondary mb-0">Students get live training, assignments, real tools, expert guidance, and continuous support for stronger skills and career growth.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band soft">
+      <div class="container">
+        <div class="row g-4 reveal">
+          <div class="col-lg-6">
+            <div class="mission-card p-4 p-lg-5">
+              <div class="feature-icon mb-3"><i class="bi bi-eye"></i></div>
+              <h2 class="fw-bold">Our Vision</h2>
+              <p class="text-secondary">SMEC Technologies aims to become a premier software training institute by providing practical skills, industry knowledge, and real-world experience. Career-focused IT training helps bridge the gap between education and employment.</p>
+              <p class="text-secondary mb-0">Through hands-on learning, live projects, expert mentorship, and continuous support, learners become confident and future-ready professionals.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="mission-card p-4 p-lg-5">
+              <div class="feature-icon mb-3"><i class="bi bi-bullseye"></i></div>
+              <h2 class="fw-bold">Our Mission</h2>
+              <p class="text-secondary">Our mission is to provide high-quality, industry-focused IT training that equips students with practical skills and real-world experience.</p>
+              <p class="text-secondary mb-0">Through hands-on projects, expert mentorship, and continuous support, students gain technical knowledge, practical exposure, and career guidance for today's evolving technology landscape.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band">
+      <div class="container">
+        <div class="director-panel reveal">
+          <div class="row align-items-center g-0">
+            <div class="col-lg-6 p-4 p-lg-5">
+              <p class="eyebrow mb-2">From the Desk</p>
+              <h2 class="fw-bold mb-3">From the Desk of Our <span class="text-blue">Managing Director</span></h2>
+              <p class="text-secondary">At SMEC Technologies, our vision is to empower every learner with real-world skills and industry-focused training. We believe in mentoring, guiding, and helping students grow into confident professionals who can create meaningful impact in the tech world.</p>
+              <p class="fw-bold mb-0">Saiju Mohamed</p>
+              <small class="text-secondary">Managing Director</small>
+            </div>
+            <div class="col-lg-6">
+              <div class="director-media">
+                <img class="media-img" src="assets/about-director.png" alt="Message from SMEC Technologies managing director">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band soft">
+      <div class="container">
+        <div class="cta-band enhanced p-4 p-lg-5 reveal">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <p class="eyebrow mb-2">Start with the right guidance</p>
+              <h2 class="fw-bold mb-3">Build practical IT skills with SMEC Technologies</h2>
+              <p class="text-secondary mb-4">Join a career-focused learning environment built around real projects, expert mentorship, interview preparation, and placement support.</p>
+              <!-- <div class="d-flex flex-wrap gap-3">
+                <a class="btn btn-dark px-4" href="index.html#courses">Explore Courses</a>
+                <a class="btn btn-outline-dark px-4" href="contact.html">Talk to Us</a>
+              </div> -->
+            </div>
+            <div class="col-lg-5">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="cta-proof p-3 h-100">
+                    <i class="bi bi-code-square fs-4"></i>
+                    <h3 class="h6 fw-bold mt-3 mb-1">Real Projects</h3>
+                    <p class="small text-secondary mb-0">Practice with tools and workflows used by software teams.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="cta-proof p-3 h-100">
+                    <i class="bi bi-briefcase fs-4"></i>
+                    <h3 class="h6 fw-bold mt-3 mb-1">Career Support</h3>
+                    <p class="small text-secondary mb-0">Get guidance for resumes, interviews, and placements.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer pt-5">
+    <div class="container">
+      <div class="row g-4 pb-4">
+        <div class="col-lg-3">
+          <img class="brand-logo mb-3" src="Logo-Website-Header.webp" alt="SMEC Technologies">
+          <p>Kerala's leading software training institute with industry-focused courses, real-world projects, and placement assistance.</p>
+          <div>
+            <a class="social-link" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a class="social-link" href="https://www.instagram.com/smec_technologies_calicut?igsh=MXJtdXRrdWp2cWJvZw==" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+            <a class="social-link" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a class="social-link" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a class="text-secondary" href="index.html#courses">Courses</a></li>
+            <li><a class="text-secondary" href="placements.html">Placements</a></li>
+            <li><a class="text-secondary" href="index.html#blog">Blog</a></li>
+            <li><a class="text-secondary" href="index.html#news">News</a></li>
+            <li><a class="text-secondary" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Popular Courses</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a class="text-secondary" href="index.html#courses">Data Science</a></li>
+            <li><a class="text-secondary" href="index.html#courses">Python Full Stack</a></li>
+            <li><a class="text-secondary" href="index.html#courses">MERN Stack</a></li>
+            <li><a class="text-secondary" href="index.html#courses">Flutter Development</a></li>
+            <li><a class="text-secondary" href="index.html#courses">Software Testing</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Company</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a class="text-secondary" href="about.html">About Us</a></li>
+            <li><a class="text-secondary" href="#">Our Trainers</a></li>
+            <li><a class="text-secondary" href="#">Careers</a></li>
+            <li><a class="text-secondary" href="termsofservices.html">Terms of Service</a></li>
+            <li><a class="text-secondary" href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6>Locations</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><i class="bi bi-geo-alt me-2"></i><strong>Calicut</strong><br><span class="text-secondary ms-4">3rd Floor, Noor Complex,<br>Arayidathupaalam,<br>Calicut<br>+91 7356398777</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top py-3 d-flex flex-column flex-md-row justify-content-between gap-2">
+        <small>&copy; 2026 SMEC Technologies. All rights reserved.</small>
+        <small>Designed with care in India</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const animatedItems = document.querySelectorAll(".reveal");
+      const countNumbers = document.querySelectorAll(".count-number");
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function formatNumber(value) {
+        return new Intl.NumberFormat("en-IN").format(value);
+      }
+
+      function runCounter(number) {
+        if (number.dataset.counted === "true") {
+          return;
+        }
+
+        const target = Number(number.dataset.count || 0);
+        number.dataset.counted = "true";
+
+        if (reduceMotion) {
+          number.textContent = formatNumber(target);
+          return;
+        }
+
+        const duration = 1500;
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+          const progress = Math.min((currentTime - startTime) / duration, 1);
+          const easedProgress = 1 - Math.pow(1 - progress, 3);
+          number.textContent = formatNumber(Math.round(target * easedProgress));
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          }
+        }
+
+        requestAnimationFrame(updateCounter);
+      }
+
+      animatedItems.forEach(function (item, index) {
+        item.style.setProperty("--reveal-delay", `${Math.min(index * 55, 220)}ms`);
+      });
+
+      if (!("IntersectionObserver" in window)) {
+        animatedItems.forEach(function (item) {
+          item.classList.add("is-visible");
+        });
+        countNumbers.forEach(runCounter);
+        return;
+      }
+
+      const revealObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          entry.target.classList.add("is-visible");
+          entry.target.querySelectorAll(".count-number").forEach(runCounter);
+          observer.unobserve(entry.target);
+        });
+      }, {
+        threshold: 0.16
+      });
+
+      animatedItems.forEach(function (item) {
+        revealObserver.observe(item);
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Placements – SMEC Technologies</title>
+    <meta name="description"
+        content="View our recent placements, celebration updates, and connect with our coordinators at SMEC Technologies to upgrade your career.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --smec-blue: #2f5fd3;
+            --smec-teal: #0aa99a;
+            --ink: #111827;
+            --muted: #667085;
+            --line: #e5e7eb;
+            --soft: #f6f8fb;
+        }
+
+        body {
+            color: var(--ink);
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            letter-spacing: 0;
+            background: #fff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .top-strip {
+            background: #747b84;
+            color: #fff;
+            font-size: .875rem;
+        }
+
+        .navbar {
+            border-bottom: 1px solid var(--line);
+            background: rgba(255, 255, 255, .96);
+            backdrop-filter: blur(14px);
+        }
+
+        .brand-logo {
+            width: 155px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .nav-link {
+            color: #1f2937;
+            font-weight: 600;
+            font-size: .92rem;
+        }
+
+        .btn-dark {
+            background: #111827;
+            border-color: #111827;
+        }
+
+        .btn,
+        .nav-link,
+        .social-link {
+            transition: transform .22s ease, box-shadow .22s ease, color .22s ease, background-color .22s ease, border-color .22s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(15, 23, 42, .12);
+        }
+
+        /* Page Hero Banner */
+        .page-hero {
+            background: linear-gradient(135deg, #f6f8fb 0%, #edf2f7 100%);
+            border-bottom: 1px solid var(--line);
+            padding: 3.5rem 0 2.5rem;
+        }
+
+        .page-hero .eyebrow {
+            color: var(--smec-blue);
+            font-size: .82rem;
+            font-weight: 800;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            font-weight: 800;
+            line-height: 1.15;
+        }
+
+        .text-blue {
+            color: var(--smec-blue);
+        }
+
+        /* Showcase Layout */
+        .showcase-wrap {
+            padding: clamp(2.5rem, 5vw, 4rem) 0;
+        }
+
+        .showcase-card {
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: #fff;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .placement-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #dbeafe, #ccfbf1);
+            display: grid;
+            place-items: center;
+            margin: 0 auto 1rem;
+            color: #101828;
+            font-weight: 800;
+        }
+
+        .iframe-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            height: 660px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+        }
+
+        /* Footer */
+        .footer {
+            background: #fff;
+            color: #344054;
+            font-size: .94rem;
+        }
+
+        .footer h6 {
+            color: #111827;
+            font-weight: 800;
+        }
+
+        .footer .list-unstyled li {
+            overflow-wrap: anywhere;
+            word-break: break-word;
+            white-space: normal;
+        }
+
+        .footer .list-unstyled li span {
+            display: inline-block;
+            max-width: 100%;
+            white-space: normal;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #eef2f7;
+            color: #111827;
+            display: inline-grid;
+            place-items: center;
+            margin-right: .4rem;
+        }
+
+        .social-link:hover {
+            background: var(--smec-blue);
+            color: #fff;
+        }
+
+        @media (max-width: 575.98px) {
+            .brand-logo {
+                width: 132px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                transition-duration: .01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-strip py-2">
+        <div class="container d-flex justify-content-center align-items-center gap-2 text-center">
+            <i class="bi bi-rocket-takeoff"></i>
+            <span>Upgrade Your Career with Industry-Focused IT Training at SMEC Technologies.</span>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container py-2">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img class="brand-logo" src="Logo-Website-Header.webp" alt="SMEC Technologies">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link active text-dark" href="placements.html">Placements</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">Resources</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html#blog">Featured Blogs</a></li>
+                            <li><a class="dropdown-item" href="index.html#news">Latest News</a></li>
+                            <li><a class="dropdown-item" href="index.html#contact">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+                <form class="d-flex align-items-center gap-2" role="search">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+                        <input class="form-control border-start-0" type="search" placeholder="Search for courses..."
+                            aria-label="Search">
+                    </div>
+                    <a class="btn btn-dark text-nowrap" href="index.html#contact">Book a Free Demo</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb mb-0" style="font-size:.85rem;">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-secondary">Home</a></li>
+                        <li class="breadcrumb-item active text-dark fw-semibold">Placements</li>
+                    </ol>
+                </nav>
+                <p class="eyebrow mb-2">Student Achievements</p>
+                <h1>Our <span class="text-blue">Placements</span></h1>
+                <p class="text-secondary mt-2 mb-0" style="max-width:620px;">We're proud of our students and their
+                    achievements at top companies. Check out our placement logs and updates.</p>
+            </div>
+        </section>
+
+        <!-- Placements Showcase Section -->
+        <section class="showcase-wrap">
+            <div class="container">
+                <div class="row g-5">
+                    <!-- Left Column: Facebook Embed Card -->
+                    <div class="col-lg-6">
+                        <div class="showcase-card text-center h-100 d-flex flex-column justify-content-center">
+                            <h2 class="h5 fw-bold mb-4 text-center">Recent Placement Celebrations</h2>
+                            <div class="iframe-wrapper shadow-sm">
+                                <iframe
+                                    src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02RRpMVBFYY39Q6NTzuVTxJChvauU9cw8knQV22VEXSxC9TPtp3ffXBcfHgER1pAn7l%26id%3D61585693643453&show_text=true&width=500"
+                                    width="100%" height="660" style="border:none;overflow:hidden" scrolling="no"
+                                    frameborder="0" allowfullscreen="true"
+                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Marketing Post & CTA Card -->
+                    <div class="col-lg-6 d-flex flex-column gap-4 justify-content-between">
+                        <!-- Image Card -->
+                        <div class="showcase-card text-center p-3">
+                            <img src="assets/Instagram-Post-1.png" alt="SMEC Technologies Placements Board"
+                                class="img-fluid rounded shadow-sm" style="max-height: 420px; object-fit: contain;">
+                        </div>
+
+                        <!-- WhatsApp CTA Card -->
+                        <div class="showcase-card text-center d-flex flex-column align-items-center justify-content-center py-5"
+                            style="background: linear-gradient(135deg, #f6f8fb 0%, #edf2f7 100%) !important;">
+                            <div class="placement-avatar" style="background: #25d366; color: #fff;">
+                                <i class="bi bi-whatsapp" style="font-size: 2rem;"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-2">Want to be part of this vibe?</h3>
+                            <p class="text-secondary small mb-4" style="max-width: 380px;">
+                                Send <strong>"PLACEMENT"</strong> on WhatsApp to get detailed reports about recent
+                                hiring records and class updates.
+                            </p>
+                            <a class="btn btn-success d-inline-flex align-items-center gap-2 px-4 py-2"
+                                href="https://wa.me/917356398777?text=PLACEMENT" target="_blank"
+                                style="background-color: #25d366; border-color: #25d366; font-weight: 600; font-size: 0.95rem;">
+                                <i class="bi bi-whatsapp"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer pt-5">
+        <div class="container">
+            <div class="row g-4 pb-4">
+                <div class="col-lg-3">
+                    <img class="brand-logo mb-3" src="Logo-Website-Header.webp" alt="SMEC Technologies">
+                    <p>Kerala's leading software training institute with industry-focused courses, real-world projects,
+                        and placement assistance.</p>
+                    <div>
+                        <a class="social-link" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a class="social-link" href="https://www.instagram.com/smec_technologies_calicut?igsh=MXJtdXRrdWp2cWJvZw==" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+                        <a class="social-link" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a class="social-link" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled lh-lg">
+                        <li><a class="text-secondary" href="index.html#courses">Courses</a></li>
+                        <li><a class="text-secondary" href="placements.html">Placements</a></li>
+                        <li><a class="text-secondary" href="index.html#blog">Blog</a></li>
+                        <li><a class="text-secondary" href="index.html#news">News</a></li>
+                        <li><a class="text-secondary" href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6>Popular Courses</h6>
+                    <ul class="list-unstyled lh-lg">
+                        <li><a class="text-secondary" href="index.html#courses">Data Science</a></li>
+                        <li><a class="text-secondary" href="index.html#courses">Python Full Stack</a></li>
+                        <li><a class="text-secondary" href="index.html#courses">MERN Stack</a></li>
+                        <li><a class="text-secondary" href="index.html#courses">Flutter Development</a></li>
+                        <li><a class="text-secondary" href="index.html#courses">Software Testing</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6>Company</h6>
+                    <ul class="list-unstyled lh-lg">
+                        <li><a class="text-secondary" href="index.html#about">About Us</a></li>
+                        <li><a class="text-secondary" href="#">Our Trainers</a></li>
+                        <li><a class="text-secondary" href="#">Careers</a></li>
+                        <li><a class="text-secondary" href="termsofservices.html">Terms of Service</a></li>
+                        <li><a class="text-secondary" href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h6>Locations</h6>
+                    <ul class="list-unstyled lh-lg">
+                        <li><i class="bi bi-geo-alt me-2"></i><strong>Calicut</strong><br><span
+                                class="text-secondary ms-4">3rd Floor, Noor Complex,<br>Arayidathupaalam,<br>Calicut<br>+91 7356398777</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top py-3 d-flex flex-column flex-md-row justify-content-between gap-2">
+                <small>&copy; 2026 SMEC Technologies. All rights reserved.</small>
+                <small>Designed with care in India</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

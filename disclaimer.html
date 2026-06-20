@@ -1,0 +1,606 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Disclaimer – SMEC Technologies</title>
+  <meta name="description" content="Read the official disclaimer of SMEC Technologies. Understand the limitations of information, liability, external links, and more regarding our IT training services.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --smec-blue: #2f5fd3;
+      --smec-teal: #0aa99a;
+      --ink: #111827;
+      --muted: #667085;
+      --line: #e5e7eb;
+      --soft: #f6f8fb;
+    }
+
+    body {
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+      background: #fff;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .top-strip {
+      background: #747b84;
+      color: #fff;
+      font-size: .875rem;
+    }
+
+    .navbar {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand-logo {
+      width: 155px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .nav-link {
+      color: #1f2937;
+      font-weight: 600;
+      font-size: .92rem;
+    }
+
+    .btn-dark {
+      background: #111827;
+      border-color: #111827;
+    }
+
+    .btn-outline-dark {
+      border-color: #111827;
+      color: #111827;
+    }
+
+    .btn,
+    .nav-link,
+    .social-link {
+      transition: transform .22s ease, box-shadow .22s ease, color .22s ease, background-color .22s ease, border-color .22s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, .12);
+    }
+
+    /* Page Hero Banner */
+    .page-hero {
+      background: linear-gradient(135deg, #f6f8fb 0%, #edf2f7 100%);
+      border-bottom: 1px solid var(--line);
+      padding: 3.5rem 0 2.5rem;
+    }
+
+    .page-hero .eyebrow {
+      color: var(--smec-blue);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.15;
+    }
+
+    .text-blue {
+      color: var(--smec-blue);
+    }
+
+    /* Content layout */
+    .legal-wrap {
+      padding: clamp(2.5rem, 5vw, 4rem) 0;
+    }
+
+    /* Table of Contents sidebar */
+    .toc-card {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+      padding: 1.5rem;
+      position: sticky;
+      top: 80px;
+    }
+
+    .toc-card h6 {
+      font-weight: 800;
+      font-size: .78rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .toc-list li + li {
+      border-top: 1px solid var(--line);
+    }
+
+    .toc-list li a {
+      display: block;
+      padding: .55rem 0;
+      font-size: .875rem;
+      color: #344054;
+      font-weight: 500;
+      transition: color .2s ease, padding-left .2s ease;
+    }
+
+    .toc-list li a:hover {
+      color: var(--smec-blue);
+      padding-left: .4rem;
+    }
+
+    /* Policy section */
+    .policy-section {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--line);
+      animation: page-rise .6s ease both;
+    }
+
+    .policy-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .policy-section .section-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      background: linear-gradient(135deg, var(--smec-blue), var(--smec-teal));
+      color: #fff;
+      font-size: .78rem;
+      font-weight: 800;
+      border-radius: 8px;
+      flex-shrink: 0;
+      margin-right: .75rem;
+    }
+
+    .policy-section h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+    }
+
+    .policy-section p,
+    .policy-section li {
+      color: #344054;
+      line-height: 1.75;
+      font-size: .95rem;
+    }
+
+    .policy-section ul,
+    .policy-section ol {
+      padding-left: 1.25rem;
+    }
+
+    .policy-section ul li,
+    .policy-section ol li {
+      margin-bottom: .35rem;
+    }
+
+    /* Last updated badge */
+    .last-updated-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      background: #f0f4ff;
+      border: 1px solid #d0dbff;
+      border-radius: 20px;
+      padding: .35rem .9rem;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--smec-blue);
+      margin-bottom: 2rem;
+    }
+
+    /* Footer */
+    .footer {
+      background: #fff;
+      color: #344054;
+      font-size: .94rem;
+    }
+
+    .footer h6 {
+      color: #111827;
+      font-weight: 800;
+    }
+
+    .footer .list-unstyled li {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      white-space: normal;
+    }
+
+    .footer .list-unstyled li span {
+      display: inline-block;
+      max-width: 100%;
+      white-space: normal;
+    }
+
+    .social-link {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #eef2f7;
+      color: #111827;
+      display: inline-grid;
+      place-items: center;
+      margin-right: .4rem;
+    }
+
+    .social-link:hover {
+      background: var(--smec-blue);
+      color: #fff;
+    }
+
+    @keyframes page-rise {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .toc-card {
+        position: static;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .brand-logo {
+        width: 132px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-strip py-2">
+    <div class="container d-flex justify-content-center align-items-center gap-2 text-center">
+      <i class="bi bi-rocket-takeoff"></i>
+      <span>Upgrade Your Career with Industry-Focused IT Training at SMEC Technologies.</span>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container py-2">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img class="brand-logo" src="Logo-Website-Header.webp" alt="SMEC Technologies">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="placements.html">Placements</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Resources</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html#blog">Featured Blogs</a></li>
+              <li><a class="dropdown-item" href="index.html#news">Latest News</a></li>
+              <li><a class="dropdown-item" href="contact.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <form class="d-flex align-items-center gap-2" role="search">
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+            <input class="form-control border-start-0" type="search" placeholder="Search for courses..." aria-label="Search">
+          </div>
+          <a class="btn btn-dark text-nowrap" href="https://wa.me/917356398777?text=Hello%20SMEC%20Technologies%2C%20I%20would%20like%20to%20book%20a%20free%20demo%20class.%20Please%20share%20the%20details." target="_blank" rel="noopener">Book a Free Demo</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb mb-0" style="font-size:.85rem;">
+            <li class="breadcrumb-item"><a href="index.html" class="text-secondary">Home</a></li>
+            <li class="breadcrumb-item active text-dark fw-semibold">Disclaimer</li>
+          </ol>
+        </nav>
+        <p class="eyebrow mb-2">Legal Information</p>
+        <h1>Disclaimer – <span class="text-blue">SMEC Technologies</span></h1>
+        <p class="text-secondary mt-2 mb-0" style="max-width:600px;">Please read this disclaimer carefully before using our website or enrolling in any of our programmes.</p>
+      </div>
+    </section>
+
+    <!-- Legal Content -->
+    <section class="legal-wrap">
+      <div class="container">
+        <div class="row g-5">
+
+          <!-- Table of Contents (Sidebar) -->
+          <div class="col-lg-3">
+            <div class="toc-card">
+              <h6>Table of Contents</h6>
+              <ul class="toc-list">
+                <li><a href="#section-intro">Introduction</a></li>
+                <li><a href="#section-1">1. Educational &amp; Training Information</a></li>
+                <li><a href="#section-2">2. No Professional or Technical Advice</a></li>
+                <li><a href="#section-3">3. Accuracy of Information</a></li>
+                <li><a href="#section-4">4. External Links Disclaimer</a></li>
+                <li><a href="#section-5">5. Limitation of Liability</a></li>
+                <li><a href="#section-6">6. Testimonials &amp; Student Results</a></li>
+                <li><a href="#section-7">7. Technology &amp; System Availability</a></li>
+                <li><a href="#section-8">8. No Warranties</a></li>
+                <li><a href="#section-9">9. Updates to This Disclaimer</a></li>
+                <li><a href="#section-10">10. Contact Information</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-9">
+            <div class="last-updated-badge">
+              <i class="bi bi-calendar3"></i>
+              Last Updated: December 06, 2025
+            </div>
+
+            <!-- Introduction -->
+            <div class="policy-section" id="section-intro">
+              <h2><span class="section-number"><i class="bi bi-info-lg"></i></span>Welcome to SMEC Technologies</h2>
+              <p>The information provided on this website (<strong>www.smectechnologies.co.in</strong>) operated by SMEC Technologies is for general informational and educational purposes only. By using the Site, you agree to the terms outlined in this Disclaimer.</p>
+            </div>
+
+            <!-- Section 1 -->
+            <div class="policy-section" id="section-1">
+              <h2><span class="section-number">1</span>Educational &amp; Training Information</h2>
+              <p>All content, programs, and materials provided on this Site — including blog posts, course descriptions, tutorials, and resources — are intended for:</p>
+              <ul>
+                <li>General awareness</li>
+                <li>Educational and skill-development purposes</li>
+              </ul>
+              <p><strong>We make no guarantees that completing any course or training will result in:</strong></p>
+              <ul>
+                <li>Salary increase</li>
+                <li>Professional certification (unless explicitly mentioned)</li>
+              </ul>
+              <p>Career outcomes vary based on individual skill, effort, and industry conditions.</p>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="policy-section" id="section-2">
+              <h2><span class="section-number">2</span>No Professional or Technical Advice</h2>
+              <p>The content on this Site should not be considered professional, technical, business, legal, or financial advice.</p>
+              <p>Before making decisions based on information provided on the Site, users are encouraged to consult a qualified professional.</p>
+              <p>SMEC Technologies is not responsible for actions taken based on any information provided on this website.</p>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="policy-section" id="section-3">
+              <h2><span class="section-number">3</span>Accuracy of Information</h2>
+              <p>We strive to ensure that the information on this Site is accurate and updated. However, we do not guarantee:</p>
+              <ul>
+                <li>Completeness</li>
+                <li>Accuracy</li>
+                <li>Reliability</li>
+                <li>Suitability</li>
+                <li>Availability of any information, products, services, or related content</li>
+              </ul>
+              <p>The Site may contain technical inaccuracies, typographical errors, outdated information, or omissions.</p>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="policy-section" id="section-4">
+              <h2><span class="section-number">4</span>External Links Disclaimer</h2>
+              <p>The Site may contain links to external or third-party websites. These links are provided for user convenience only.</p>
+              <p><strong>SMEC Technologies:</strong></p>
+              <ul>
+                <li>Does not control or endorse third-party sites</li>
+                <li>Is not responsible for the accuracy, content, or security of external sites</li>
+                <li>Is not liable for any loss or damages caused by third-party services</li>
+              </ul>
+              <p>Users access external websites at their own risk.</p>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="policy-section" id="section-5">
+              <h2><span class="section-number">5</span>Limitation of Liability</h2>
+              <p>Under no circumstances shall SMEC Technologies be held liable for any:</p>
+              <ul>
+                <li>Direct damages</li>
+                <li>Indirect damages</li>
+                <li>Incidental damages</li>
+                <li>Special damages</li>
+                <li>Consequential damages</li>
+              </ul>
+              <p>This includes damages arising out of:</p>
+              <ul>
+                <li>Use or inability to use the website</li>
+                <li>Errors or omissions in content</li>
+                <li>Delays, interruptions, or performance issues</li>
+                <li>Malware, viruses, or harmful components</li>
+              </ul>
+              <p>All use of the Site is strictly at the user's own risk.</p>
+            </div>
+
+            <!-- Section 6 -->
+            <div class="policy-section" id="section-6">
+              <h2><span class="section-number">6</span>Testimonials &amp; Student Results</h2>
+              <p>Testimonials, reviews, or success stories featured on this Site represent:</p>
+              <ul>
+                <li>Real experiences shared by students or clients</li>
+                <li>Personal opinions based on individual results</li>
+              </ul>
+              <p>They do not guarantee that all users will experience the same outcomes. Results vary based on personal commitment, skill level, and industry factors.</p>
+            </div>
+
+            <!-- Section 7 -->
+            <div class="policy-section" id="section-7">
+              <h2><span class="section-number">7</span>Technology &amp; System Availability</h2>
+              <p>SMEC Technologies does not guarantee that:</p>
+              <ul>
+                <li>The Site will be error-free</li>
+                <li>The platform will be available without interruption</li>
+                <li>The server is free from harmful components</li>
+              </ul>
+              <p>We reserve the right to modify, suspend, or discontinue any part of the Site at any time without notice.</p>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="policy-section" id="section-8">
+              <h2><span class="section-number">8</span>No Warranties</h2>
+              <p>All information, services, and materials on this Site are provided <strong>"as is"</strong> and <strong>"as available"</strong> without warranties of any kind, whether express or implied.</p>
+            </div>
+
+            <!-- Section 9 -->
+            <div class="policy-section" id="section-9">
+              <h2><span class="section-number">9</span>Updates to This Disclaimer</h2>
+              <p>SMEC Technologies may modify or update this Disclaimer at any time without prior notice. Continued use of the Site means you accept the updated terms.</p>
+            </div>
+
+            <!-- Section 10 -->
+            <div class="policy-section" id="section-10">
+              <h2><span class="section-number">10</span>Contact Information</h2>
+              <p>If you have questions regarding this Disclaimer, please contact:</p>
+              <ul class="list-unstyled">
+                <li class="mb-1"><i class="bi bi-envelope me-2 text-secondary"></i><strong>Email:</strong> <a href="mailto:mahima.smeclabs@gmail.com" class="text-dark">mahima.smeclabs@gmail.com</a></li>
+                <li class="mb-1"><i class="bi bi-geo-alt me-2 text-secondary"></i><strong>Address:</strong> 3rd Floor, Noor Complex, Arayidathupaalam, Calicut</li>
+                <li><i class="bi bi-globe me-2 text-secondary"></i><strong>Website:</strong> <a href="https://smectechnologies.co.in/" class="text-dark">https://smectechnologies.co.in/</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer pt-5">
+    <div class="container">
+      <div class="row g-4 pb-4">
+        <div class="col-lg-3">
+          <img class="brand-logo mb-3" src="Logo-Website-Header.webp" alt="SMEC Technologies">
+          <p>Kerala's leading software training institute with industry-focused courses, real-world projects, and placement assistance.</p>
+          <div>
+            <a class="social-link" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a class="social-link" href="https://www.instagram.com/smec_technologies_calicut?igsh=MXJtdXRrdWp2cWJvZw==" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+            <a class="social-link" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a class="social-link" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a class="text-secondary" href="index.html#courses">Courses</a></li>
+            <li><a class="text-secondary" href="placements.html">Placements</a></li>
+            <li><a class="text-secondary" href="index.html#blog">Blog</a></li>
+            <li><a class="text-secondary" href="index.html#news">News</a></li>
+            <li><a class="text-secondary" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Popular Courses</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a class="text-secondary" href="index.html#courses">Data Science</a></li>
+            <li><a class="text-secondary" href="index.html#courses">Python Full Stack</a></li>
+            <li><a class="text-secondary" href="index.html#courses">MERN Stack</a></li>
+            <li><a class="text-secondary" href="index.html#courses">Flutter Development</a></li>
+            <li><a class="text-secondary" href="index.html#courses">Software Testing</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Company</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a class="text-secondary" href="about.html">About Us</a></li>
+            <li><a class="text-secondary" href="#">Our Trainers</a></li>
+            <li><a class="text-secondary" href="#">Careers</a></li>
+            <li><a class="text-secondary" href="termsofservices.html">Terms of Service</a></li>
+            <li><a class="text-secondary" href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6>Locations</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><i class="bi bi-geo-alt me-2"></i><strong>Calicut</strong><br><span class="text-secondary ms-4">3rd Floor, Noor Complex,<br>Arayidathupaalam,<br>Calicut<br>+91 7356398777</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top py-3 d-flex flex-column flex-md-row justify-content-between gap-2">
+        <small>&copy; 2026 SMEC Technologies. All rights reserved.</small>
+        <small>Designed with care in India</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Smooth scroll for TOC links
+    document.querySelectorAll('.toc-list a[href^="#"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          var offset = 100;
+          var top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Highlight active TOC item on scroll
+    var sections = document.querySelectorAll('.policy-section[id]');
+    var tocLinks = document.querySelectorAll('.toc-list a');
+    window.addEventListener('scroll', function() {
+      var scrollY = window.scrollY + 120;
+      sections.forEach(function(section) {
+        var sectionTop = section.offsetTop;
+        var sectionH = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionH) {
+          tocLinks.forEach(function(a) { a.style.color = ''; a.style.fontWeight = ''; });
+          var active = document.querySelector('.toc-list a[href="#' + section.id + '"]');
+          if (active) { active.style.color = '#2f5fd3'; active.style.fontWeight = '700'; }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+

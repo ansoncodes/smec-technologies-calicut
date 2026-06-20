@@ -1,0 +1,1173 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Courses - SMEC Technologies</title>
+  <meta name="description" content="Explore industry-ready courses in Full Stack, App Development, UI/UX, Data Science, QA and more.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --smec-blue: #2f5fd3;
+      --smec-teal: #0aa99a;
+      --ink: #111827;
+      --muted: #667085;
+      --line: #e5e7eb;
+      --soft: #f6f8fb;
+    }
+
+    body {
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+      background: #fff;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .top-strip {
+      background: #747b84;
+      color: #fff;
+      font-size: .875rem;
+    }
+
+    .navbar {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand-logo {
+      width: 155px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .nav-link {
+      color: #1f2937;
+      font-weight: 600;
+      font-size: .92rem;
+    }
+
+    .btn-dark {
+      background: #111827;
+      border-color: #111827;
+    }
+
+    .btn-outline-dark {
+      border-color: #111827;
+      color: #111827;
+    }
+
+    .btn,
+    .nav-link,
+    .social-link,
+    .program-filter {
+      transition: transform .22s ease, box-shadow .22s ease, color .22s ease, background-color .22s ease, border-color .22s ease;
+    }
+
+    .btn:hover,
+    .program-filter:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, .12);
+    }
+
+    .page-hero {
+      padding: clamp(2.75rem, 6vw, 4.75rem) 0 clamp(2.75rem, 6vw, 4.25rem);
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 8% 10%, rgba(47, 95, 211, .12), transparent 26rem),
+        radial-gradient(circle at 100% 82%, rgba(10, 169, 154, .12), transparent 25rem),
+        linear-gradient(rgba(47, 95, 211, .045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47, 95, 211, .045) 1px, transparent 1px),
+        linear-gradient(180deg, #f7f9ff 0%, #fff 82%);
+      background-size: auto, auto, 48px 48px, 48px 48px, auto;
+    }
+
+    .eyebrow {
+      color: #111827;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-size: clamp(2.7rem, 5vw, 3.9rem);
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .text-blue {
+      color: var(--smec-blue);
+    }
+
+    .lead-copy {
+      color: #344054;
+      max-width: 640px;
+      font-size: clamp(1rem, 1.4vw, 1.18rem);
+      line-height: 1.55;
+    }
+
+    .section-band {
+      padding: clamp(2.75rem, 6vw, 5rem) 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-band.soft {
+      background: var(--soft);
+    }
+
+    .stat-card,
+    .course-card,
+    .feature-card,
+    .event-panel,
+    .event-card,
+    .placement-card,
+    .campus-card,
+    .cta-band {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .stat-card,
+    .course-card,
+    .feature-card,
+    .event-panel,
+    .event-card,
+    .placement-card,
+    .campus-card,
+    .cta-band {
+      transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+    }
+
+    .course-card:hover,
+    .feature-card:hover,
+    .event-card:hover,
+    .placement-card:hover,
+    .campus-card:hover,
+    .event-panel:hover {
+      transform: translateY(-4px);
+      border-color: #d0d5dd;
+      box-shadow: 0 18px 42px rgba(15, 23, 42, .08);
+    }
+
+    .visual-panel {
+      position: relative;
+      min-height: 430px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(47, 95, 211, .08), rgba(10, 169, 154, .06)),
+        #f8fafc;
+      overflow: hidden;
+    }
+
+    .dot-grid {
+      position: absolute;
+      top: 24px;
+      left: -84px;
+      width: 165px;
+      height: 165px;
+      background-image: radial-gradient(#cbd5e1 1.4px, transparent 1.4px);
+      background-size: 14px 14px;
+    }
+
+    .floating-card {
+      position: absolute;
+      right: -24px;
+      bottom: 48px;
+      max-width: 270px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, .92);
+      box-shadow: 0 18px 60px rgba(15, 23, 42, .12);
+      backdrop-filter: blur(12px);
+      z-index: 2;
+      animation: subtle-float 5.5s ease-in-out infinite;
+    }
+
+    .media-img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .visual-panel .media-img {
+      position: relative;
+      z-index: 1;
+      object-fit: contain;
+      padding: 18px;
+    }
+
+    .program-filter {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: #344054;
+      border-radius: 999px;
+      font-size: .88rem;
+      font-weight: 700;
+      padding: .7rem 1rem;
+    }
+
+    .program-filter.active {
+      background: #111827;
+      color: #fff;
+      border-color: #111827;
+    }
+
+    .course-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    .course-media,
+    .cta-media {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #f8fafc, #edf2f7);
+    }
+
+    .course-media {
+      height: 150px;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .course-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .course-title {
+      min-height: 3.2rem;
+      line-height: 1.35;
+    }
+
+    .course-description {
+      min-height: 4.7rem;
+      line-height: 1.45;
+    }
+
+    .course-level {
+      width: fit-content;
+    }
+
+    .course-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .5rem;
+      margin-top: auto;
+    }
+
+    .course-meta span {
+      min-width: 0;
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+
+    .course-action {
+      margin-top: 1rem;
+    }
+
+    .course-actions {
+      display: grid;
+      gap: .65rem;
+      margin-top: 1rem;
+    }
+
+    .course-actions .course-action {
+      margin-top: 0;
+    }
+
+    .course-apply-action {
+      background: #111827;
+      border-color: #111827;
+      color: #fff;
+      box-shadow: 0 14px 28px rgba(15, 23, 42, .12);
+    }
+
+    .course-apply-action:hover {
+      background: #1f2937;
+      border-color: #1f2937;
+      color: #fff;
+    }
+
+    .course-view-action {
+      background: #fff;
+      border-color: #d0d5dd;
+      color: #111827;
+    }
+
+    .course-view-action:hover {
+      background: #f8fafc;
+      border-color: #111827;
+      color: #111827;
+    }
+
+    .course-icon,
+    .event-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: #111827;
+      font-size: 1.35rem;
+      flex: 0 0 auto;
+    }
+
+    .course-icon {
+      margin-top: -24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge-soft {
+      background: #eef2f7;
+      color: #344054;
+      border: 1px solid #e4e7ec;
+    }
+
+    .feature-card {
+      display: flex;
+      min-height: 236px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #f8fafc;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 1rem;
+      flex: 0 0 auto;
+    }
+
+    .feature-icon i {
+      margin: 0;
+      color: #111827;
+      font-size: 1.35rem;
+    }
+
+    .feature-title {
+      min-height: 2.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.25;
+    }
+
+    .feature-copy {
+      min-height: 4.9rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      line-height: 1.4;
+    }
+
+    .event-row + .event-row {
+      border-top: 1px solid var(--line);
+    }
+
+    .placement-avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #dbeafe, #ccfbf1);
+      display: grid;
+      place-items: center;
+      margin: 0 auto 1rem;
+      color: #101828;
+      font-weight: 800;
+    }
+
+    .placement-card {
+      display: flex;
+      min-height: 205px;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .partner-logo {
+      height: 58px;
+      min-width: 150px;
+      padding: 0 1rem;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: #334155;
+      font-size: .86rem;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background: #fff;
+    }
+
+    .partners-carousel {
+      position: relative;
+      overflow: hidden;
+      padding: .25rem 0;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    }
+
+    .partners-track {
+      display: flex;
+      width: max-content;
+      gap: 1rem;
+      animation: partners-scroll 24s linear infinite;
+    }
+
+    .partners-carousel:hover .partners-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes partners-scroll {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(calc(-50% - .5rem));
+      }
+    }
+
+    .cta-media {
+      min-height: 210px;
+      border-radius: 8px;
+    }
+
+    .footer {
+      background: #fff;
+      color: #344054;
+      font-size: .94rem;
+    }
+
+    .footer h6 {
+      color: #111827;
+      font-weight: 800;
+    }
+
+    .footer .list-unstyled li {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      white-space: normal;
+    }
+
+    .footer .list-unstyled li span {
+      display: inline-block;
+      max-width: 100%;
+      white-space: normal;
+    }
+
+    .social-link {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #eef2f7;
+      color: #111827;
+      display: inline-grid;
+      place-items: center;
+      margin-right: .4rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .7s ease, transform .7s ease;
+      transition-delay: var(--reveal-delay, 0ms);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .page-hero .eyebrow,
+    .hero-title,
+    .lead-copy,
+    .page-hero .btn,
+    .stat-card,
+    .visual-panel {
+      animation: page-rise .7s ease both;
+    }
+
+    .hero-title {
+      animation-delay: .08s;
+    }
+
+    .lead-copy {
+      animation-delay: .16s;
+    }
+
+    .page-hero .btn {
+      animation-delay: .24s;
+    }
+
+    .stat-card,
+    .visual-panel {
+      animation-delay: .32s;
+    }
+
+    @keyframes page-rise {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes subtle-float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .visual-panel {
+        min-height: 340px;
+      }
+
+      .floating-card {
+        right: 18px;
+        bottom: 20px;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .brand-logo {
+        width: 132px;
+      }
+
+      .hero-title {
+        font-size: 2.4rem;
+      }
+
+      .visual-panel {
+        min-height: 280px;
+        border-radius: 18px;
+      }
+
+      .floating-card {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin: -42px 16px 0;
+      }
+
+      .partner-logo {
+        min-width: 132px;
+      }
+
+      .course-meta {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+
+      .partners-track {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-strip py-2">
+    <div class="container d-flex justify-content-center align-items-center gap-2 text-center">
+      <i class="bi bi-sparkles"></i>
+      <span>2026 Batches &mdash; Admissions Open</span>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container py-2">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img class="brand-logo" src="Logo-Website-Header.webp" alt="SMEC Technologies">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-3">
+          <li class="nav-item"><a class="nav-link active" href="courses.html" aria-current="page">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="placements.html">Placements</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Resources</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html#blog">Featured Blogs</a></li>
+              <li><a class="dropdown-item" href="index.html#news">Latest News</a></li>
+              <li><a class="dropdown-item" href="contact.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <form class="d-flex align-items-center gap-2" role="search">
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+            <input class="form-control border-start-0" type="search" placeholder="Search courses..." aria-label="Search">
+          </div>
+          <a class="btn btn-dark text-nowrap" href="https://wa.me/917356398777?text=Hello%20SMEC%20Technologies%2C%20I%20would%20like%20to%20book%20a%20free%20demo%20class.%20Please%20share%20the%20details." target="_blank" rel="noopener">Book a Free Demo</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="mb-4">
+          <ol class="breadcrumb small mb-0">
+            <li class="breadcrumb-item"><a class="text-secondary" href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Courses</li>
+          </ol>
+        </nav>
+        <h1 class="hero-title mb-3">Courses</h1>
+        <p class="lead-copy mb-0">Industry-ready programs built with hiring partners &mdash; choose a path, ship real projects, and get placed.</p>
+      </div>
+    </section>
+
+    <section class="section-band soft" id="programs">
+      <div class="container">
+        <div class="d-flex flex-column flex-lg-row justify-content-between gap-4 mb-4 reveal">
+          <div>
+            <p class="eyebrow mb-2">Courses</p>
+            <h2 class="fw-bold">Industry-tested curricula built with hiring partners</h2>
+            <p class="text-secondary mb-0">Choose a path, ship real projects, and get placed.</p>
+          </div>
+          <div class="d-flex flex-wrap gap-2 align-self-lg-end" aria-label="Course categories">
+            <button class="program-filter active" type="button">All Courses</button>
+            <button class="program-filter" type="button">Full Stack Development</button>
+            <button class="program-filter" type="button">App Development</button>
+            <button class="program-filter" type="button">Software Testing</button>
+            <button class="program-filter" type="button">Design</button>
+            <button class="program-filter" type="button">Advanced Programs</button>
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4 reveal">
+          <div class="col">
+            <article class="course-card h-100" id="data-analytics-ai">
+              <div class="course-media"><img class="media-img" src="assets/course-data-science.svg" alt="Professional Certificate in Data Analytics with AI"></div>
+              <div class="course-body p-4">
+                <div class="course-icon mb-3"><i class="bi bi-bar-chart"></i></div>
+                <span class="course-level badge badge-soft rounded-pill mb-3">Data Analytics Engineer</span>
+                <h3 class="course-title h6 fw-bold mb-2">Professional Certificate in Data Analytics with Prompt Engineering- 5-6 MONTHS</h3>
+                <p class="course-description small text-secondary">Turn raw data into decisions with Python, SQL, Power BI and AI-assisted analysis.</p>
+                <div class="course-meta small text-secondary"><span><i class="bi bi-clock"></i> 5-6 months</span><span><i class="bi bi-signal"></i> Beginner</span></div>
+                <div class="course-actions">
+                  <a class="course-action course-apply-action btn w-100" href="#contact">Apply Now</a>
+                  <a class="course-action course-view-action btn btn-outline-dark w-100" href="courses/data-analytics-with-prompt-engineering.html">View Course</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="course-card h-100" id="software-testing-ai">
+              <div class="course-media"><img class="media-img" src="assets/course-testing.svg" alt="Software Testing with Gen AI Integration"></div>
+              <div class="course-body p-4">
+                <div class="course-icon mb-3"><i class="bi bi-bug"></i></div>
+                <span class="course-level badge badge-soft rounded-pill mb-3">AI Software Testing</span>
+                <h3 class="course-title h6 fw-bold mb-2">Software Testing with Gen Al Integration &ndash; 4 Months</h3>
+                <p class="course-description small text-secondary">Manual + automation QA, Selenium, Playwright and AI-assisted test generation.</p>
+                <div class="course-meta small text-secondary"><span><i class="bi bi-clock"></i> 4 months</span><span><i class="bi bi-signal"></i> Beginner</span></div>
+                <div class="course-actions">
+                  <a class="course-action course-apply-action btn w-100" href="#contact">Apply Now</a>
+                  <a class="course-action course-view-action btn btn-outline-dark w-100" href="courses/software-testing.html">View Course</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="course-card h-100" id="python-fullstack-ai">
+              <div class="course-media"><img class="media-img" src="assets/course-python.svg" alt="Python Fullstack with Gen AI Integration - 6 Months"></div>
+              <div class="course-body p-4">
+                <div class="course-icon mb-3"><i class="bi bi-puzzle"></i></div>
+                <span class="course-level badge badge-soft rounded-pill mb-3">AI Python Full Stack</span>
+                <h3 class="course-title h6 fw-bold mb-2">Python Fullstack with Gen Al Integration &ndash; 6 MONTHS</h3>
+                <p class="course-description small text-secondary">Django, FastAPI, React and LLM integrations &mdash; from fundamentals to cloud deployment.</p>
+                <div class="course-meta small text-secondary"><span><i class="bi bi-clock"></i> 6 months</span><span><i class="bi bi-signal"></i> Intermediate</span></div>
+                <div class="course-actions">
+                  <a class="course-action course-apply-action btn w-100" href="#contact">Apply Now</a>
+                  <a class="course-action course-view-action btn btn-outline-dark w-100" href="courses/python-fullstack.html">View Course</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="course-card h-100" id="mern-stack-ai">
+              <div class="course-media"><img class="media-img" src="assets/course-mern.svg" alt="ME(A)RN Stack with Gen AI Integration - 6 Months"></div>
+              <div class="course-body p-4">
+                <div class="course-icon mb-3"><i class="bi bi-database"></i></div>
+                <span class="course-level badge badge-soft rounded-pill mb-3">AI MERN Stack</span>
+                <h3 class="course-title h6 fw-bold mb-2">ME(A)RN Stack with Gen Al Integration &ndash; 6 MONTHS</h3>
+                <p class="course-description small text-secondary">MongoDB, Express, React/Next and Node &mdash; production apps with integrated AI features.</p>
+                <div class="course-meta small text-secondary"><span><i class="bi bi-clock"></i> 6 months</span><span><i class="bi bi-signal"></i> Intermediate</span></div>
+                <div class="course-actions">
+                  <a class="course-action course-apply-action btn w-100" href="#contact">Apply Now</a>
+                  <a class="course-action course-view-action btn btn-outline-dark w-100" href="courses/mearn-stack.html">View Course</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="course-card h-100" id="flutter-ai">
+              <div class="course-media"><img class="media-img" src="assets/course-flutter.svg" alt="Flutter Development with Gen AI Integration"></div>
+              <div class="course-body p-4">
+                <div class="course-icon mb-3"><i class="bi bi-phone"></i></div>
+                <span class="course-level badge badge-soft rounded-pill mb-3">AI Flutter Dev</span>
+                <h3 class="course-title h6 fw-bold mb-2">Flutter Development with Gen Al Integration &ndash; 4 MONTHS</h3>
+                <p class="course-description small text-secondary">Ship cross-platform iOS and Android apps with Flutter, state management, and AI APIs.</p>
+                <div class="course-meta small text-secondary"><span><i class="bi bi-clock"></i> 4 months</span><span><i class="bi bi-signal"></i> Intermediate</span></div>
+                <div class="course-actions">
+                  <a class="course-action course-apply-action btn w-100" href="#contact">Apply Now</a>
+                  <a class="course-action course-view-action btn btn-outline-dark w-100" href="courses/flutter-development.html">View Course</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="course-card h-100" id="uiux-ai">
+              <div class="course-media"><img class="media-img" src="assets/news-uiux.svg" alt="UI/UX Designing with Gen AI Integration"></div>
+              <div class="course-body p-4">
+                <div class="course-icon mb-3"><i class="bi bi-vector-pen"></i></div>
+                <span class="course-level badge badge-soft rounded-pill mb-3">AI UI/UX Design</span>
+                <h3 class="course-title h6 fw-bold mb-2">UI/UX Designing with Gen Al Integration &ndash; 4 MONTHS</h3>
+                <p class="course-description small text-secondary">Design beautiful, usable interfaces with Figma, design systems and AI-driven prototyping.</p>
+                <div class="course-meta small text-secondary"><span><i class="bi bi-clock"></i> 4 months</span><span><i class="bi bi-signal"></i> Beginner</span></div>
+                <div class="course-actions">
+                  <a class="course-action course-apply-action btn w-100" href="#contact">Apply Now</a>
+                  <a class="course-action course-view-action btn btn-outline-dark w-100" href="courses/ui-ux-with-gen-ai.html">View Course</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="course-card h-100" id="dotnet-fullstack-ai">
+              <div class="course-media"><img class="media-img" src="assets/news-fullstack.svg" alt=".Net Fullstack with Gen AI Integration - 6 Months"></div>
+              <div class="course-body p-4">
+                <div class="course-icon mb-3"><i class="bi bi-code-slash"></i></div>
+                <span class="course-level badge badge-soft rounded-pill mb-3">Full Stack Development</span>
+                <h3 class="course-title h6 fw-bold mb-2">.Net Fullstack with Gen Al Integration &ndash; 6 MONTHS</h3>
+                <p class="course-description small text-secondary">Build enterprise-grade web applications with ASP.NET Core, C#, React and AI tooling.</p>
+                <div class="course-meta small text-secondary"><span><i class="bi bi-clock"></i> 6 months</span><span><i class="bi bi-signal"></i> Advanced</span></div>
+                <div class="course-actions">
+                  <a class="course-action course-apply-action btn w-100" href="#contact">Apply Now</a>
+                  <a class="course-action course-view-action btn btn-outline-dark w-100" href="courses/dot-net.html">View Course</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="course-card h-100" id="advanced-ai-big-data">
+              <div class="course-media"><img class="media-img" src="assets/course-data-science.svg" alt="Master in Advanced AI and Big Data Analytics"></div>
+              <div class="course-body p-4">
+                <div class="course-icon mb-3"><i class="bi bi-cpu"></i></div>
+                <span class="course-level badge badge-soft rounded-pill mb-3">Advanced Programs</span>
+                <h3 class="course-title h6 fw-bold mb-2">Master in Advanced AI and Big Data Analytics with Gen AI-9MONTHS</h3>
+                <p class="course-description small text-secondary">Deep dive into advanced ML, LLMs, and distributed big-data pipelines with real projects.</p>
+                <div class="course-meta small text-secondary"><span><i class="bi bi-clock"></i> 9 months</span><span><i class="bi bi-signal"></i> Advanced</span></div>
+                <div class="course-actions">
+                  <a class="course-action course-apply-action btn w-100" href="#contact">Apply Now</a>
+                  <a class="course-action course-view-action btn btn-outline-dark w-100" href="courses/advanced-ai-and-big-data-analytics.html">View Course</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="course-card h-100" id="data-science-advanced-ai">
+              <div class="course-media"><img class="media-img" src="assets/course-data-science.svg" alt="Professional Certificate in Data Science, Advanced AI and ML with Gen AI- 7 MONTHS"></div>
+              <div class="course-body p-4">
+                <div class="course-icon mb-3"><i class="bi bi-bar-chart-steps"></i></div>
+                <span class="course-level badge badge-soft rounded-pill mb-3">Data Science &amp; AI</span>
+                <h3 class="course-title h6 fw-bold mb-2">Professional Certificate in Data Science, Advanced AI and ML with Gen AI- 7 MONTHS</h3>
+                <p class="course-description small text-secondary">Master AI, ML and data science with Python, real-world datasets, and intelligent modeling.</p>
+                <div class="course-meta small text-secondary"><span><i class="bi bi-clock"></i> 7 months</span><span><i class="bi bi-signal"></i> Advanced</span></div>
+                <div class="course-actions">
+                  <a class="course-action course-apply-action btn w-100" href="#contact">Apply Now</a>
+                  <a class="course-action course-view-action btn btn-outline-dark w-100" href="courses/data-science-advanced-ai-and-ml.html">View Course</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band" id="why-smec">
+      <div class="container">
+        <div class="text-center mb-4 reveal">
+          <p class="eyebrow mb-2">Why SMEC</p>
+          <h2 class="fw-bold">What to expect from SMEC Technologies</h2>
+          <p class="text-secondary mb-0">A training experience engineered for outcomes - built for learners who want real skills, real projects, and real placements.</p>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-6 g-3 reveal">
+          <div class="col">
+            <div class="feature-card h-100 p-4 text-center">
+              <div class="feature-icon"><i class="bi bi-person-check"></i></div>
+              <h3 class="feature-title h6 fw-bold mb-2">Industry-Expert Trainers</h3>
+              <p class="feature-copy small text-secondary mb-0">Learn from certified professionals with years of real-world IT experience, not just slides.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100 p-4 text-center">
+              <div class="feature-icon"><i class="bi bi-cpu"></i></div>
+              <h3 class="feature-title h6 fw-bold mb-2">Practical, Hands-On Training</h3>
+              <p class="feature-copy small text-secondary mb-0">Every session includes live projects, tools, and real industry case studies you can ship.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100 p-4 text-center">
+              <div class="feature-icon"><i class="bi bi-person-badge"></i></div>
+              <h3 class="feature-title h6 fw-bold mb-2">Job-Oriented Curriculum</h3>
+              <p class="feature-copy small text-secondary mb-0">Each course is reverse-engineered from what top companies are actually hiring for right now.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100 p-4 text-center">
+              <div class="feature-icon"><i class="bi bi-clipboard-check"></i></div>
+              <h3 class="feature-title h6 fw-bold mb-2">Continuous Assessments</h3>
+              <p class="feature-copy small text-secondary mb-0">Regular quizzes, assignments, and mock interviews sharpen both your skills and confidence.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100 p-4 text-center">
+              <div class="feature-icon"><i class="bi bi-heart-pulse"></i></div>
+              <h3 class="feature-title h6 fw-bold mb-2">Dedicated Student Support</h3>
+              <p class="feature-copy small text-secondary mb-0">Get doubt-clearing, mentorship, and career guidance whenever you need it - not just in class.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100 p-4 text-center">
+              <div class="feature-icon"><i class="bi bi-award"></i></div>
+              <h3 class="feature-title h6 fw-bold mb-2">100% Internship Assistance</h3>
+              <p class="feature-copy small text-secondary mb-0">Guaranteed internship opportunities help you build a strong portfolio before placements.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band soft" id="events">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-4 reveal">
+            <div class="event-panel p-4 h-100">
+              <p class="eyebrow text-secondary mb-2">Masterclass</p>
+              <h2 class="fw-bold">What's Coming Up</h2>
+              <p class="text-secondary">Masterclasses, workshops and career sessions - feed your brain every week.</p>
+              <a class="btn btn-dark" href="#contact">View Schedule</a>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="row row-cols-1 row-cols-md-3 g-3 reveal">
+              <div class="col">
+                <article class="event-card h-100 p-4">
+                  <span class="badge badge-soft mb-3">Workshop</span>
+                  <h3 class="h6 fw-bold">Intro to AI-Integrated Full Stack</h3>
+                  <p class="small text-secondary mb-4">Learn how modern full-stack applications use AI tools from planning to deployment.</p>
+                  <a class="fw-bold text-dark" href="#contact">Reserve seat <i class="bi bi-arrow-right"></i></a>
+                </article>
+              </div>
+              <div class="col">
+                <article class="event-card h-100 p-4">
+                  <span class="badge badge-soft mb-3">Masterclass</span>
+                  <h3 class="h6 fw-bold">Build Your First Gen AI Chatbot</h3>
+                  <p class="small text-secondary mb-4">A practical session for learners who want to connect app logic with AI workflows.</p>
+                  <a class="fw-bold text-dark" href="#contact">Reserve seat <i class="bi bi-arrow-right"></i></a>
+                </article>
+              </div>
+              <div class="col">
+                <article class="event-card h-100 p-4">
+                  <span class="badge badge-soft mb-3">Career Event</span>
+                  <h3 class="h6 fw-bold">UI/UX Portfolio Review Live</h3>
+                  <p class="small text-secondary mb-4"><i class="bi bi-calendar3"></i> May 11, 2026<br><i class="bi bi-clock"></i> 7:00 PM IST<br><i class="bi bi-geo-alt"></i> Online &middot; Zoom</p>
+                  <a class="fw-bold text-dark" href="#contact">Reserve seat <i class="bi bi-arrow-right"></i></a>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band" id="placements">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-3">
+            <p class="eyebrow mb-2">Success Stories</p>
+            <h2 class="fw-bold">Every success story is proof of real outcomes</h2>
+            <p class="text-secondary">Students placed in top MNCs and fast-growing product companies, backed by a dedicated placement support team.</p>
+          </div>
+          <div class="col-lg-9">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3 reveal">
+              <div class="col"><article class="placement-card h-100 p-4 text-center"><div class="placement-avatar">DS</div><strong>Data Scientist</strong><small class="text-secondary">Placed at Infosys</small></article></div>
+              <div class="col"><article class="placement-card h-100 p-4 text-center"><div class="placement-avatar">MD</div><strong>MERN Developer</strong><small class="text-secondary">Placed at IBM</small></article></div>
+              <div class="col"><article class="placement-card h-100 p-4 text-center"><div class="placement-avatar">UX</div><strong>UI/UX Designer</strong><small class="text-secondary">Placed at Wipro</small></article></div>
+              <div class="col"><article class="placement-card h-100 p-4 text-center"><div class="placement-avatar">FD</div><strong>Flutter Dev</strong><small class="text-secondary">Placed at J.P.Morgan</small></article></div>
+              <div class="col"><article class="placement-card h-100 p-4 text-center"><div class="placement-avatar">NE</div><strong>.NET Engineer</strong><small class="text-secondary">Placed at HSBC</small></article></div>
+              <div class="col"><article class="placement-card h-100 p-4 text-center"><div class="placement-avatar">QA</div><strong>QA Engineer</strong><small class="text-secondary">Placed at TATA</small></article></div>
+              <div class="col"><article class="placement-card h-100 p-4 text-center"><div class="placement-avatar">CI</div><strong>Cloud Intern</strong><small class="text-secondary">Placed at BofA</small></article></div>
+              <div class="col"><article class="placement-card h-100 p-4 text-center"><div class="placement-avatar">PY</div><strong>Python Developer</strong><small class="text-secondary">Placed at TCS</small></article></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 reveal">
+          <h2 class="h5 text-center fw-bold mb-3">Our Learners Work At</h2>
+          <div class="partners-carousel" aria-label="Hiring partners carousel">
+            <div class="partners-track">
+              <div class="partner-logo">TCS</div>
+              <div class="partner-logo">Infosys</div>
+              <div class="partner-logo">IBM</div>
+              <div class="partner-logo">Wipro</div>
+              <div class="partner-logo">TATA</div>
+              <div class="partner-logo">HSBC</div>
+              <div class="partner-logo">Bank of America</div>
+              <div class="partner-logo">J.P.Morgan</div>
+              <div class="partner-logo" aria-hidden="true">TCS</div>
+              <div class="partner-logo" aria-hidden="true">Infosys</div>
+              <div class="partner-logo" aria-hidden="true">IBM</div>
+              <div class="partner-logo" aria-hidden="true">Wipro</div>
+              <div class="partner-logo" aria-hidden="true">TATA</div>
+              <div class="partner-logo" aria-hidden="true">HSBC</div>
+              <div class="partner-logo" aria-hidden="true">Bank of America</div>
+              <div class="partner-logo" aria-hidden="true">J.P.Morgan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band soft" id="blog">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between gap-3 mb-4 reveal">
+          <div>
+            <p class="eyebrow mb-2">Insights</p>
+            <h2 class="fw-bold">From the blog</h2>
+            <p class="text-secondary mb-0">Career guides, course deep-dives, and trends in AI, hand-picked by our mentors.</p>
+          </div>
+          <a class="fw-bold text-dark align-self-md-end" href="#blog">View All <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="row g-4 reveal">
+          <div class="col-lg-4">
+            <article class="event-panel p-4 h-100">
+              <span class="badge badge-soft mb-3">Full Stack</span>
+              <h3 class="h5 fw-bold">Why the AI-Integrated Python Full Stack Course Is the Most In-Demand Skill in 2026</h3>
+              <p class="text-secondary">What if one skill could open the door to more jobs, higher pay, and future-proof your career?</p>
+              <a class="fw-bold text-dark" href="#blog">Read article <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="event-panel p-4 h-100">
+              <span class="badge badge-soft mb-3">Full Stack</span>
+              <h3 class="h5 fw-bold">9 Mistakes Students Make in MERN Stack Courses with AI</h3>
+              <p class="text-secondary">Avoid the most common pitfalls that slow down real-world development when using AI tools.</p>
+              <a class="fw-bold text-dark" href="#blog">Read article <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="event-panel p-4 h-100">
+              <span class="badge badge-soft mb-3">Design</span>
+              <h3 class="h5 fw-bold">5 Mistakes That Block Your AI-Driven UI/UX Design Certification</h3>
+              <p class="text-secondary">Are AI-powered design tools actually helping you learn UI/UX - or holding you back?</p>
+              <a class="fw-bold text-dark" href="#blog">Read article <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band" id="campuses">
+      <div class="container">
+        <div class="text-center mb-4 reveal">
+          <p class="eyebrow mb-2">Campuses:</p>
+          <h2 class="fw-bold">Our Campuses</h2>
+          <p class="text-secondary mb-0">Kochi &middot; Calicut &middot; Trivandrum</p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4 reveal">
+          <div class="col">
+            <article class="campus-card h-100 p-4">
+              <div class="event-icon mb-3"><i class="bi bi-geo-alt"></i></div>
+              <h3 class="h5 fw-bold">Kochi</h3>
+              <p class="text-secondary mb-0">II Floor, Express House,<br>Kaloor, Kochi, Ernakulam,<br>Kerala 682017</p>
+            </article>
+          </div>
+          <div class="col">
+            <article class="campus-card h-100 p-4">
+              <div class="event-icon mb-3"><i class="bi bi-geo-alt"></i></div>
+              <h3 class="h5 fw-bold">Calicut</h3>
+              <p class="text-secondary mb-0">3rd Floor, Noor Complex,<br>Arayidathupaalam,<br>Calicut</p>
+            </article>
+          </div>
+          <div class="col">
+            <article class="campus-card h-100 p-4">
+              <div class="event-icon mb-3"><i class="bi bi-geo-alt"></i></div>
+              <h3 class="h5 fw-bold">Trivandrum</h3>
+              <p class="text-secondary mb-0">10th Floor, above Thampanoor,<br>KSRTC Bus Terminal Complex, Z-1,<br>Thiruvananthapuram, Kerala 695001</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band" id="contact">
+      <div class="container">
+        <div class="cta-band p-4 p-lg-5 reveal">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5">
+              <p class="eyebrow mb-2">Your Next Step</p>
+              <h2 class="fw-bold">Become a skilled IT professional</h2>
+              <p class="text-secondary">Join 20,000+ learners. No spam - unsubscribe anytime.</p>
+              <a class="btn btn-dark px-4" href="tel:+917356398777">Book a Free Demo</a>
+            </div>
+            <div class="col-lg-7">
+              <div class="cta-media"><img class="media-img" src="assets/cta-career.svg" alt="Become a skilled IT professional"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer pt-5">
+    <div class="container">
+      <div class="row g-4 pb-4">
+        <div class="col-lg-3">
+          <img class="brand-logo mb-3" src="Logo-Website-Header.webp" alt="SMEC Technologies">
+          <p>Industry-focused IT training in Kochi, Calicut and Trivandrum. Learn AI Python Full Stack, MERN, Flutter, UI/UX, Data Science and more with hands-on projects and placement support.</p>
+          <div>
+            <a class="social-link" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a class="social-link" href="https://www.instagram.com/smec_technologies_calicut?igsh=MXJtdXRrdWp2cWJvZw==" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+            <a class="social-link" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a class="social-link" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Company</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a class="text-secondary" href="index.html">Home</a></li>
+            <li><a class="text-secondary" href="#programs">Courses</a></li>
+            <li><a class="text-secondary" href="placements.html">Placements</a></li>
+            <li><a class="text-secondary" href="about.html">About</a></li>
+            <li><a class="text-secondary" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Courses</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a class="text-secondary" href="#programs">AI Python Full Stack</a></li>
+            <li><a class="text-secondary" href="#programs">AI MERN Stack</a></li>
+            <li><a class="text-secondary" href="#programs">AI Flutter Dev</a></li>
+            <li><a class="text-secondary" href="#programs">AI UI/UX Design</a></li>
+            <li><a class="text-secondary" href="#programs">AI Software Testing</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Legal</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a class="text-secondary" href="#events">Masterclass</a></li>
+            <li><a class="text-secondary" href="#events">Workshop</a></li>
+            <li><a class="text-secondary" href="#blog">Career</a></li>
+            <li><a class="text-secondary" href="disclaimer.html">Privacy</a></li>
+            <li><a class="text-secondary" href="termsofservices.html">Terms</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6>Locations</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><i class="bi bi-geo-alt me-2"></i><strong>Calicut</strong><br><span class="text-secondary ms-4">3rd Floor, Noor Complex,<br>Arayidathupaalam,<br>Calicut</span></li>
+            <li><i class="bi bi-envelope me-2"></i><span class="text-secondary">mahima.smeclabs@gmail.com</span></li>
+            <li><i class="bi bi-phone me-2"></i><span class="text-secondary">+91 73563 98777</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top py-3 d-flex flex-column flex-md-row justify-content-between gap-2">
+        <small>&copy; 2026 SMEC Technologies. All rights reserved.</small>
+        <small>Learn &middot; Build &middot; Get Hired</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const animatedItems = document.querySelectorAll(".reveal");
+
+      animatedItems.forEach(function (item, index) {
+        item.style.setProperty("--reveal-delay", `${Math.min(index * 55, 220)}ms`);
+      });
+
+      if (!("IntersectionObserver" in window)) {
+        animatedItems.forEach(function (item) {
+          item.classList.add("is-visible");
+        });
+        return;
+      }
+
+      const revealObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      }, {
+        threshold: 0.16
+      });
+
+      animatedItems.forEach(function (item) {
+        revealObserver.observe(item);
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
